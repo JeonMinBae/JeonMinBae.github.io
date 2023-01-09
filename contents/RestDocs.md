@@ -1,18 +1,9 @@
 ---
-title: "테스트코드 기반 API 문서 자동화 Rest Docs "
-excerpt: "Spring Rest Docs"
-toc: true
-toc_sticky: true
-categories:
-
-- Spring
-
-tags:
-
-- Spring Boot
-- Rest Docs
-- Asciidoctor
-
+date: '2022-08-01'
+title: 'Spring Rest Docs Docs'
+categories: ['Spring', 'Test']
+summary: '테스트코드 기반 API 문서 자동화 Rest Docs'
+thumbnail: './test.png'
 ---
 
 <style>
@@ -138,6 +129,7 @@ dependencies {
 src/resources/static/docs</ww> 에 같은 이름의 html파일로 복사됩니다.
 
 ![img1]({{site.url}}/assets/images/jmb/restdocs/img1.png)
+![img2](./profile-image.png)
 ![img2]({{site.url}}/assets/images/jmb/restdocs/img2.png)
 
 인텔리제이에서는 플러그인 설치 시 해당 파일의 결과를 미리볼 수 있습니다.
@@ -161,10 +153,8 @@ src/resources/static/docs</ww> 에 같은 이름의 html파일로 복사됩니�
 
 # 문서 조합
 
-> asciidoc 기본
->
-사용법: [https://narusas.github.io/2018/03/21/Asciidoc-basic.html](https://narusas.github.io/2018/03/21/Asciidoc-basic.html)
->
+> asciidoc 기본 사용법: [https://narusas.github.io/2018/03/21/Asciidoc-basic.html](https://narusas.github.io/2018/03/21/Asciidoc-basic.html)
+
 
 <p><ww>include::{snippets}/index/curl-request.adoc[]</ww> 형식으로 문서에 스니펫을 추가할 수 있습니다.</p>
 
@@ -351,9 +341,7 @@ public void update()throws Exception{
 
 아직은 작은 프로젝트에만 적용되어 사용 중이지만 이후에는 전반적인 프로젝트에 적용하여 사용할 예정입니다.
 
-> 참조:  <br/>
-[https://techblog.woowahan.com/2597/](https://techblog.woowahan.com/2597/) <br/>
-[https://johngrib.github.io/wiki/restdoc-item-generator/](https://johngrib.github.io/wiki/restdoc-item-generator/) <br/>
-[https://velog.io/@dae-hwa/Spring-REST-Docs-살펴볼만한-기능들](https://velog.io/@dae-hwa/Spring-REST-Docs-%EC%82%B4%ED%8E%B4%EB%B3%BC%EB%A7%8C%ED%95%9C-%EA%B8%B0%EB%8A%A5%EB%93%A4) <br/>
-[https://backtony.github.io/spring/2021-10-15-spring-test-3](https://backtony.github.io/spring/2021-10-15-spring-test-3) <br/>
->
+> 참조:  <br/>[https://techblog.woowahan.com/2597/](https://techblog.woowahan.com/2597/) <br/>
+> [https://johngrib.github.io/wiki/restdoc-item-generator/](https://johngrib.github.io/wiki/restdoc-item-generator/) <br/>
+> [https://velog.io/@dae-hwa/Spring-REST-Docs-살펴볼만한-기능들](https://velog.io/@dae-hwa/Spring-REST-Docs-%EC%82%B4%ED%8E%B4%EB%B3%BC%EB%A7%8C%ED%95%9C-%EA%B8%B0%EB%8A%A5%EB%93%A4) <br/>
+> [https://backtony.github.io/spring/2021-10-15-spring-test-3](https://backtony.github.io/spring/2021-10-15-spring-test-3)

@@ -1,16 +1,11 @@
 ---
-title: "java 8 interface default"
-toc: true
-toc_sticky: true
-categories:
-
-- Java
-
-tags:
-
-- Interface
-
+date: '2022-08-24'
+title: 'java 8 interface default'
+categories: ['Java']
+summary: 'java 8에서 interface'
+thumbnail: './test.png'
 ---
+
 
 
 # interface default

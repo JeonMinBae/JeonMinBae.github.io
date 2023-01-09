@@ -1,16 +1,11 @@
 ---
-title: "스웨거"
-toc: true
-toc_sticky: true
-categories:
-
-- Spring
-
-tags:
-
-- Swagger
-
+date: '2022-07-03'
+title: 'Swagger'
+categories: ['Spring']
+summary: '스웨거 어노테이션'
+thumbnail: './test.png'
 ---
+
 
 # 스웨거
 

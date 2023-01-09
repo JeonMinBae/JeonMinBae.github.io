@@ -1,15 +1,9 @@
 ---
-title: "Cors"
-toc: true
-toc_sticky: true
-categories:
-
-- Http
-
-tags:
-
-- Cors
-
+date: '2022-09-14'
+title: 'Cors'
+categories: ['Http']
+summary: 'cors의 동작에 대해 알아보기'
+thumbnail: './test.png'
 ---
 
 # CORS(교차 출처 리소스 공유)

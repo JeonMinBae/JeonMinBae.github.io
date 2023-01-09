@@ -1,17 +1,13 @@
 ---
-title: "WebClient, RestTemplate 단순비교"
-toc: true
-toc_sticky: true
-categories:
-
-- Spring
-
-tags:
-
-- WebClient
-- RestTemplate
-
+date: '2022-07-15'
+title: 'Webclient, RestTemplate 단순비교'
+categories: ['Http']
+summary: 'Webclient, RestTemplate은 어떤 점이 다를까'
+thumbnail: './test.png'
 ---
+
+
+
 
 # WebClient란
 

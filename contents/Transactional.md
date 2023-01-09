@@ -1,17 +1,9 @@
 ---
-title: "@Transactional 어노테이션 정리 "
-excerpt: "Transactional"
-toc: true
-toc_sticky: true
-categories:
-
-- Spring
-
-tags:
-
-- annotation
-- Transactional
-
+date: '2022-08-07'
+title: '@Transactional 어노테이션 정리'
+categories: ['Spring']
+summary: '@Transactional 어노테이션 정리'
+thumbnail: './test.png'
 ---
 
 

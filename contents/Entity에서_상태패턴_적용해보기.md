@@ -1,17 +1,12 @@
 ---
-title: "Entity에서 상태패턴 적용해보기(실패에 가까움)"
-toc: true
-toc_sticky: true
-categories:
-
-- Spring
-
-tags:
-
-- Jpa
-- State pattern
-
+date: '2022-08-26'
+title: 'Entity와 상태패턴'
+categories: ['Spring', 'Jpa']
+summary: 'Entity에서 상태패턴 적용해보기'
+thumbnail: './test.png'
 ---
+
+
 
 # Entity에 디자인 패턴을 적용시키면 어떨까
 

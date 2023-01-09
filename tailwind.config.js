@@ -11,6 +11,13 @@ module.exports = {
     ],
 
     theme: {
+        // screens:{
+        //     'sm-max': {'max': '640px'},
+        //     'md-max': {'max': '768px'},
+        //     'lg-max': {'max': '1024px'},
+        //     'xl-max': {'max': '1280px'},
+        //     '2xl-max': {'max': '1536px'},
+        // },
         extend: {
             colors: {},
             keyframes: {

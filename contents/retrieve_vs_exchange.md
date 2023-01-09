@@ -1,15 +1,9 @@
 ---
-title: "Webclient에서 retrieve와 exchange의 차이점"
-toc: true
-toc_sticky: true
-categories:
-
-- Spring
-
-tags:
-
-- Webclient
-
+date: '2022-08-10'
+title: 'Webclient에서 retrieve와 exchange의 차이점'
+categories: ['Spring']
+summary: 'retrieve와 exchange의 차이점과 테스트'
+thumbnail: './test.png'
 ---
 
 
@@ -210,9 +204,5 @@ public String testExchange(@RequestParam(required = false) int version) {
 
 추가적으로 Mono나 Flux의 메소드 중 do…, on… 의 여러 메소드들이 존재하여 에러 발생 시 특정 값이 넘기거나 에러를 스킵하고 동작, 성공 시 처리, 종료 시 처리 등의 또 다른 처리들이 가능하지만 아직은 공부가 부족하여 좀 더 공부한 후에 다뤄보는것이 보고싶습니다.
 
-> 내용에 틀리거나 지적할 부분이 있을 시 알려주신다면 감사하겠습니다.
-> 
-
-> 참조:
-[https://stackoverflow.com/questions/58410352/spring-boot-webclients-retrieve-vs-exchange](https://stackoverflow.com/questions/58410352/spring-boot-webclients-retrieve-vs-exchange)
->
+내용에 틀리거나 지적할 부분이 있을 시 알려주신다면 감사하겠습니다.
+> 참조: [https://stackoverflow.com/questions/58410352/spring-boot-webclients-retrieve-vs-exchange](https://stackoverflow.com/questions/58410352/spring-boot-webclients-retrieve-vs-exchange)
