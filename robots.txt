@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://jeonminbae.github.io/sitemap-index.xml
+Host: https://jeonminbae.github.io
