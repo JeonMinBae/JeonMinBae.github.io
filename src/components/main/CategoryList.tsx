@@ -27,6 +27,7 @@ const CategoryList = (
         <CategoryListWrapper>
             {Object.entries(categoryList).map(([name, count]) => (
                 <CategoryItem key={name}
+                              data-component={'CategoryItem'}
                               to={`/?category=${name}`}
                               active={name === selectedCategory}
                 >

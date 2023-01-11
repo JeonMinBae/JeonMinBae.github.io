@@ -10,7 +10,7 @@ export interface ILayoutProps {
 const Layout = ({children, ...rest}: ILayoutProps) => {
 
     return (
-        <div {...rest}>
+        <div data-component={'Layout'} {...rest}>
             <GlobalStyles />
             {children}
         </div>

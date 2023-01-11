@@ -12,7 +12,7 @@ export interface IGatsbyImgProps {
 
 
 const BackgroundImage = (props: IGatsbyImgProps) => <GatsbyImage {...props} className={`brightness-[0.25] object-cover w-full h-[25rem] relative`}  />
-const PostHeadWrapper = (props) => <div className={`w-full h-[25rem] relative`}>{props.children}</div>
+const PostHeadWrapper = (props) => <div data-component={'PostHeadWrapper'} className={`w-full h-[25rem] relative`}>{props.children}</div>
 
 export interface IPostHeadProps extends IPostHeadInfoProps{
     thumbnail: IGatsbyImageData

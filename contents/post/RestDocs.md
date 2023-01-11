@@ -128,13 +128,13 @@ dependencies {
 파일의 이름은 원하는대로 설정 가능하며, <ww>build.gradle</ww>에 설정한 경로인 <ww>
 src/resources/static/docs</ww> 에 같은 이름의 html파일로 복사됩니다.
 
-![img1]({{site.url}}/assets/images/jmb/restdocs/img1.png)
-![img2](./profile-image.png)
-![img2]({{site.url}}/assets/images/jmb/restdocs/img2.png)
+![img1](../image/restdocs/img1.png)
+![img2](contents/profile-image.png)
+![img2](../image/restdocs/img2.png)
 
 인텔리제이에서는 플러그인 설치 시 해당 파일의 결과를 미리볼 수 있습니다.
 
-![img3]({{site.url}}/assets/images/jmb/restdocs/img3.png)
+![img3](../image/restdocs/img3.png)
 
 # 빌드
 
@@ -142,14 +142,14 @@ src/resources/static/docs</ww> 에 같은 이름의 html파일로 복사됩니�
 
 문서들은 <ww>build.gradle</ww>에 설정한 경로인 <ww>build/generated-snippets</ww>에 생성됩니다.
 
-![img4]({{site.url}}/assets/images/jmb/restdocs/img4.png)
+![img4](../image/restdocs/img4.png)
 
 ## 빌드 실패 원인확인
 
 빌드 실패 시 <ww>build/reports/tests/test/index.html</ww>에서 테스트 결과와 실패 원인을 확인해 볼 수
 있습니다.
 
-![img5]({{site.url}}/assets/images/jmb/restdocs/img5.png)
+![img5](../image/restdocs/img5.png)
 
 # 문서 조합
 
@@ -177,9 +177,9 @@ user[snippets='http-request, http-response, response-fields']</ww>
 만약 헤더의 이름이 마음에 들지 않는다면 직접 지정할 수도 있습니다.
 <ww>:operation-http-request-title: header name sample</ww>
 
-![img6]({{site.url}}/assets/images/jmb/restdocs/img6.png)
+![img6](../image/restdocs/img6.png)
 
-![img7]({{site.url}}/assets/images/jmb/restdocs/img7.png)
+![img7](../image/restdocs/img7.png)
 
 # 스니펫 커스텀
 
@@ -191,14 +191,14 @@ user[snippets='http-request, http-response, response-fields']</ww>
 
 <p><ww>test/resources/org/springframework/restdocs/templates</ww> 에 원하는 스니펫 파일을 원본 이름과 같게 만들어 커스텀 가능합니다.</p>
 
-![img8]({{site.url}}/assets/images/jmb/restdocs/img8.png)
+![img8](../image/restdocs/img8.png)
 
 기본 템플릿은 <ww>spring-restdocs-core</ww>의  <ww>
 org.springframework.restdocs.templates.asciidoctor</ww>에 존재합니다.
 
 이를 참고하여 기본형태에 원하는 값을 추가할 수도 있고 형태를 변경 시킬 수도 있습니다.
 
-![img9]({{site.url}}/assets/images/jmb/restdocs/img9.png)
+![img9](../image/restdocs/img9.png)
 
 ## 데이터 커스텀
 
@@ -238,12 +238,12 @@ resultActions.andExpect(status().isOk())
 ## 예시
 
 기본형태
-![mustache1]({{site.url}}/assets/images/jmb/restdocs/mustache1.png)
+![mustache1](../image/restdocs/mustache1.png)
 
 스니펫을 커스텀하여 <ww>Optional</ww>, <ww>Format</ww> 을 추가한 형태
-![mustache2]({{site.url}}/assets/images/jmb/restdocs/mustache2.png)
+![mustache2](../image/restdocs/mustache2.png)
 
-![img10]({{site.url}}/assets/images/jmb/restdocs/img10.png)
+![img10](../image/restdocs/img10.png)
 
 # 예시 및 결과
 
@@ -308,7 +308,7 @@ public void update()throws Exception{
   }
 ```
 
-![img11]({{site.url}}/assets/images/jmb/restdocs/img11.png)
+![img11](../image/restdocs/img11.png)
 
 # 마무리
 

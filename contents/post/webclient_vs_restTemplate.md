@@ -56,6 +56,6 @@ SpringFramework 5.0에서 지원하는 HTTP Client
 
 ### 성능
 
-![img]({{site.url}}/assets/images/jmb/Webclient_vs_RestTemplate/img.png)
+![img](../image/Webclient_vs_RestTemplate/img.png)
 
 > 참조: [https://medium.com/@odysseymoon/spring-webclient-사용법-5f92d295edc0](https://medium.com/@odysseymoon/spring-webclient-%EC%82%AC%EC%9A%A9%EB%B2%95-5f92d295edc0)

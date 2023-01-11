@@ -124,7 +124,7 @@ public class T3State implements TestState {
 }
 ```
 
-![img1]({{site.url}}/assets/images/jmb/jpa_state_parttern/img1.png)
+![img1](../image/jpa_state_parttern/img1.png)
 
 ## @Transient
 
@@ -132,7 +132,7 @@ JPA는`@Transient` 라는 어노테이션을 지원합니다.
 
 이 기능을 이용하면 인터페이스가 영속화 대상에서 제외되며 `entity` 내부에서 인터페이스를 사용할 수  있습니다.
 
-![img2]({{site.url}}/assets/images/jmb/jpa_state_parttern/img2.png)
+![img2](../image/jpa_state_parttern/img2.png)
 
 ```java
 @Getter
@@ -239,7 +239,7 @@ class TestTest {
 }
 ```
 
-![img3]({{site.url}}/assets/images/jmb/jpa_state_parttern/img3.png)
+![img3](../image/jpa_state_parttern/img3.png)
 
 `@Transient` 로 제외한 필드는 영속성 컨텍스트로 관리되지 않기에 
 
@@ -258,9 +258,9 @@ find류 함수로 불러올 때는 값이 채워지지 않은 비어있는 상�
 
 이제 새로운 상태가 추가되었을 때는 상태에 맞는 처리를 하는 클래스를 작성 후 초기화 함수에 추가만 해주면 되게되었습니다.
 
-![img4]({{site.url}}/assets/images/jmb/jpa_state_parttern/img4.png)
+![img4](../image/jpa_state_parttern/img4.png)
 
-![img5]({{site.url}}/assets/images/jmb/jpa_state_parttern/img5.png)
+![img5](../image/jpa_state_parttern/img5.png)
 
 
 <br/>
@@ -327,7 +327,7 @@ private void initState() {
 
 JPA 엔티티에 상태패턴을 적용하여 처리하기는 성공하였으나 그 방식에 깔끔하지 못해 개선이 필요해보인다.
 
-![img6]({{site.url}}/assets/images/jmb/jpa_state_parttern/img6.png)
+![img6](../image/jpa_state_parttern/img6.png)
 
 
 <br/>

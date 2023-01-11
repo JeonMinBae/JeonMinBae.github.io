@@ -124,7 +124,7 @@ public String testRetrieve(@RequestParam(required = false) int version) {
 }
 ```
 
-![img1]({{site.url}}/assets/images/jmb/retrieve_exchange/img1.png)
+![img1](../image/retrieve_exchange/img1.png)
 
 정상적으로 값을 받아오는걸 볼 수 있습니다.
 
@@ -140,7 +140,7 @@ public String testRetrieve(@RequestParam(required = false) int version) {
 
 `onStatus`의 인터페이스를 확인해보면 매개변수로 Throwable을 상속받은 객체를 Mono로 감싸 넘겨줄 수 있습니다. 
 
-![img2]({{site.url}}/assets/images/jmb/retrieve_exchange/img2.png)
+![img2](../image/retrieve_exchange/img2.png)
 
 ## Exchange
 
@@ -150,7 +150,7 @@ public String testRetrieve(@RequestParam(required = false) int version) {
 
 이번에는 `exchangeToMono`의 인터페이스 먼저 살펴본 후 넘어가겠습니다.
 
-![img3]({{site.url}}/assets/images/jmb/retrieve_exchange/img3.png)
+![img3](../image/retrieve_exchange/img3.png)
 
 Throwable을 상속받은 객체만 Mono형태로 리턴할 수 있는 `onStatus`와 달리 Mono를 상속받은 아무 객체나 리턴시킬 수 있습니다.
 
@@ -187,7 +187,7 @@ public String testExchange(@RequestParam(required = false) int version) {
 }
 ```
 
-![img4]({{site.url}}/assets/images/jmb/retrieve_exchange/img4.png)
+![img4](../image/retrieve_exchange/img4.png)
 
 오류의 형태로만 컨트롤할 수 있던 `retrieve` 와 달리 `exchange` 는 리턴 값의 형태를 바꾸거나 오류로 치환하는 등의 더 유연한 처리가 가능했습니다.
 

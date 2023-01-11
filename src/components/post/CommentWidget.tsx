@@ -3,7 +3,7 @@ import React, { createRef, useEffect } from "react"
 
 
 const src = 'https://utteranc.es/client.js'
-const repo = '[username]/[username].github.io'
+const repo = '/JeonMinBae.github.io'
 
 
 

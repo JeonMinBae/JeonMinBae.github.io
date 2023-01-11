@@ -10,7 +10,7 @@ export interface IPostContentProps {
 
 const PostContent = ({ html }: IPostContentProps) => {
 
-    const MarkdownRenderer = styled.div`
+    const MarkdownRenderer = styled.section`
       // Renderer Style
       display: flex;
       flex-direction: column;

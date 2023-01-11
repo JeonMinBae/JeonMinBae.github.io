@@ -4,7 +4,7 @@ import tw from "twin.macro"
 
 
 const TocWrapper = (props) => <div data-component={"TocWrapper"} css={tw`xl:(fixed right-8 block w-auto) mt-5 flex flex-col w-[768px] border-2 border-gray-400 border-solid rounded `} {...props}>{props.children}</div>
-const TocTitle = (props) => <div className={'bg-gray-400 text-white text-center p-3 '} {...props}>{props.children}</div>
+const TocTitle = (props) => <div data-component={"TocTitle`"} className={'bg-gray-400 text-white text-center p-3 '} {...props}>{props.children}</div>
 
 export interface ITableOfContentsProps {
     toc: string
@@ -16,10 +16,6 @@ const TableOfContents = (
         toc,
     }: ITableOfContentsProps
 ) => {
-
-
-
-    console.log("toc", toc)
 
     const Toc = styled.div`
     

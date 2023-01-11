@@ -35,12 +35,12 @@ const Introduction = (
 ) => {
 
     return (
-        <Background>
-            <Wrapper>
+        <Background data-component={'Background'}>
+            <Wrapper data-component={'Wrapper'}>
                 <ProfileImage profileImage={profileImage} />
                 <div>
-                    <Title>전민배의 블로그</Title>
-                    <SubTitle>Hello, I'm Jeon Min Bae's blog. Kim Jaehyun will talk about 1,538 ways to
+                    <Title data-component={'Title'}>전민배의 블로그</Title>
+                    <SubTitle data-component={'SubTitle'}>Hello, I'm Jeon Min Bae's blog. Kim Jaehyun will talk about 1,538 ways to
                         bully.</SubTitle>
                 </div>
             </Wrapper>
