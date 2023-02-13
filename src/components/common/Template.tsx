@@ -50,6 +50,8 @@ const Template = (
                 <meta name="twitter:site" content="Hardy" />
                 <meta name="twitter:creator" content="Hardy" />
 
+                <meta name="google-site-verification" content="-D8_ZMKNzbPlcFO6UHuFoET6K1MHECG1bP-9_7mkEko" />
+
                 <html lang={"ko"} />
 
             </Helmet>
