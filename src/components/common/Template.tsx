@@ -51,6 +51,7 @@ const Template = (
                 <meta name="twitter:creator" content="Hardy" />
 
                 <meta name="google-site-verification" content="-D8_ZMKNzbPlcFO6UHuFoET6K1MHECG1bP-9_7mkEko" />
+                <meta name="naver-site-verification" content="42e87f7e5eec3000385ee0aa614ae8f4e39977f2" />
 
                 <html lang={"ko"} />
 
