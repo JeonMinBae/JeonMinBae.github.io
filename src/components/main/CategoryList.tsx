@@ -3,8 +3,8 @@ import { Link} from "gatsby"
 import tw, {styled} from 'twin.macro'
 
 
-const CategoryListWrapper = (props) => <div data-component={'CategoryListWrapper'} tw={'flex flex-wrap w-[768px] mt-36 mx-auto'}>{props.children}</div>
-const CategoryItem = styled(Link)(props => props.active ? tw`font-[800] text-black` : tw`font-[400] text-stone-500`, tw`mr-4 py-1 px-0 text-[1.125rem] cursor-pointer last-of-type:mr-0`)
+const CategoryListWrapper = styled.div`${tw`flex flex-wrap w-[768px] mt-36 mx-auto`}`
+const CategoryItem = styled(Link)(({active}: boolean) => active ? tw`font-[800] text-white` : tw`font-[400] text-stone-500`, tw`mr-4 py-1 px-0 text-[1.125rem] cursor-pointer last-of-type:mr-0`)
 
 
 export interface ICategoryListProps {
@@ -24,7 +24,7 @@ const CategoryList = (
 ) => {
 
     return (
-        <CategoryListWrapper>
+        <CategoryListWrapper data-component={'CategoryListWrapper'}>
             {Object.entries(categoryList).map(([name, count]) => (
                 <CategoryItem key={name}
                               data-component={'CategoryItem'}

@@ -3,7 +3,7 @@ date: '2022-08-07'
 title: '@Transactional 어노테이션 정리'
 categories: ['Spring']
 summary: '@Transactional 어노테이션 정리'
-thumbnail: './test.png'
+thumbnail: 'Transactional.png'
 ---
 
 

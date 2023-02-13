@@ -1,24 +1,10 @@
 import React from "react"
-import styled from "@emotion/styled"
-import tw from "twin.macro"
+import tw, {styled} from "twin.macro"
 
 
-const TocWrapper = (props) => <div data-component={"TocWrapper"} css={tw`xl:(fixed right-8 block w-auto) mt-5 flex flex-col w-[768px] border-2 border-gray-400 border-solid rounded `} {...props}>{props.children}</div>
-const TocTitle = (props) => <div data-component={"TocTitle`"} className={'bg-gray-400 text-white text-center p-3 '} {...props}>{props.children}</div>
-
-export interface ITableOfContentsProps {
-    toc: string
-    //children?: React.ReactNode,
-}
-
-const TableOfContents = (
-    {
-        toc,
-    }: ITableOfContentsProps
-) => {
-
-    const Toc = styled.div`
-    
+const TocWrapper = styled.div`${tw`xl:(fixed right-8 block w-auto) mt-5 mx-auto flex flex-col w-[768px] border-2 border-gray-400 border-solid rounded`}`
+const TocTitle = styled.div`${tw`bg-gray-400 text-white text-center p-3`}`
+const Toc = styled.div`    
         a {
             max-width: 9rem;
             display: block;
@@ -58,12 +44,22 @@ const TableOfContents = (
             color: white;
             background-color: gray;
         }
-        
     `;
 
+export interface ITableOfContentsProps {
+    toc: string
+    //children?: React.ReactNode,
+}
+
+const TableOfContents = (
+    {
+        toc,
+    }: ITableOfContentsProps
+) => {
+
     return (
-        <TocWrapper>
-            <TocTitle>Table of Contents</TocTitle>
+        <TocWrapper data-component={"TocWrapper"}>
+            <TocTitle data-component={"TocTitle`"} >Table of Contents</TocTitle>
             <Toc dangerouslySetInnerHTML={{__html: toc}} />
         </TocWrapper>
     )

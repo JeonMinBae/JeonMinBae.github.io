@@ -1,9 +1,12 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Footer from "components/common/Footer"
+import SideMenu from "components/common/SideMenu";
+import tw, {styled} from "twin.macro";
 
 
-const Container = (props) => <main data-component={'Container'} className={"xl:block flex flex-col items-center h-full text-[#c5c6c7]"} {...props}>{props.children}</main>
+const Container = styled.main`${tw`flex flex-col items-center h-full text-[#c5c6c7]`}`;
+
 
 export interface IContainerProps {
     title: string
@@ -24,7 +27,7 @@ const Template = (
 ) => {
 
     return (
-        <Container>
+        <Container data-component={'Container'}>
             <Helmet>
                 <html lang="ko" />
                 <title>JeonMinBae's Blog</title>
@@ -46,7 +49,11 @@ const Template = (
                 <meta name="twitter:image" content={image} />
                 <meta name="twitter:site" content="Hardy" />
                 <meta name="twitter:creator" content="Hardy" />
+
+                <html lang={"ko"} />
+
             </Helmet>
+            <SideMenu/>
             {children}
             <Footer />
         </Container>

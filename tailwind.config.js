@@ -11,13 +11,6 @@ module.exports = {
     ],
 
     theme: {
-        // screens:{
-        //     'sm-max': {'max': '640px'},
-        //     'md-max': {'max': '768px'},
-        //     'lg-max': {'max': '1024px'},
-        //     'xl-max': {'max': '1280px'},
-        //     '2xl-max': {'max': '1536px'},
-        // },
         extend: {
             colors: {},
             keyframes: {
@@ -26,6 +19,12 @@ module.exports = {
                     "50%": { opacity: "0.5" },
                     "100%": { opacity: "0" }
                 }
+            },
+            gridTemplateColumns: {
+                "post-1": 'repeat(1, minmax(20rem, 1fr))',
+                "post-2": 'repeat(2, minmax(20rem, 1fr))',
+                "post-3": 'repeat(3, minmax(20rem, 1fr))',
+                "post-4": 'repeat(4, minmax(20rem, 1fr))',
             },
             animation: {
                 "tracking-in": "out 0.4s reverse",

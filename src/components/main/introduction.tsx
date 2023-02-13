@@ -40,8 +40,7 @@ const Introduction = (
                 <ProfileImage profileImage={profileImage} />
                 <div>
                     <Title data-component={'Title'}>전민배의 블로그</Title>
-                    <SubTitle data-component={'SubTitle'}>Hello, I'm Jeon Min Bae's blog. Kim Jaehyun will talk about 1,538 ways to
-                        bully.</SubTitle>
+                    <SubTitle data-component={'SubTitle'}>노력</SubTitle>
                 </div>
             </Wrapper>
         </Background>

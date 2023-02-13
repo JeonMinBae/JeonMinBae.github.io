@@ -3,7 +3,7 @@ date: '2022-07-15'
 title: 'Webclient, RestTemplate 단순비교'
 categories: ['Http']
 summary: 'Webclient, RestTemplate은 어떤 점이 다를까'
-thumbnail: './test.png'
+thumbnail: 'webclient_vs_restTemplate.png'
 ---
 
 
@@ -56,6 +56,6 @@ SpringFramework 5.0에서 지원하는 HTTP Client
 
 ### 성능
 
-![img](../image/Webclient_vs_RestTemplate/img.png)
+![img](./webclient_vs_restTemplate.png)
 
 > 참조: [https://medium.com/@odysseymoon/spring-webclient-사용법-5f92d295edc0](https://medium.com/@odysseymoon/spring-webclient-%EC%82%AC%EC%9A%A9%EB%B2%95-5f92d295edc0)

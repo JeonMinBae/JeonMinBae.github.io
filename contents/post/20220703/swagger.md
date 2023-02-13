@@ -3,7 +3,7 @@ date: '2022-07-03'
 title: 'Swagger'
 categories: ['Spring']
 summary: '스웨거 어노테이션'
-thumbnail: './test.png'
+thumbnail: 'swagger_thumbnail.png'
 ---
 
 
@@ -39,7 +39,7 @@ thumbnail: './test.png'
     }
     ```
 
-    ![img](../image/swagger/img.png)
+    ![img](./swagger.png)
     
 
 - `@ApiModelProperty`: 응답 객체필드에 대한 명세를 기재
@@ -72,10 +72,10 @@ thumbnail: './test.png'
     }
     ```
 
-    ![img1](../image/swagger/img2.png)
+    ![img1](./swagger2.png)
 
 
-![img2](../image/swagger/img2.png)
+![img2](./swagger2.png)
 
 - `@ApiImplicitParam` : api의 파라메터에 대한 명세를 기재
     
@@ -114,7 +114,7 @@ thumbnail: './test.png'
     }
     ```
 
-    ![img3](../image/swagger/img3.png)
+    ![img3](./swagger3.png)
     
 
 - `@ApiIgnore` api를 스웨거 문서에서 보이지 않게 함
@@ -162,7 +162,7 @@ thumbnail: './test.png'
             ),
         })
         ```
-        ![img4](../image/swagger/img4.png)
+        ![img4](./swagger4.png)
         
     - responseContainer:
 

@@ -3,7 +3,7 @@ date: '2022-08-24'
 title: 'java 8 interface default'
 categories: ['Java']
 summary: 'java 8에서 interface'
-thumbnail: './test.png'
+thumbnail: 'java8-interface_thumbnail.png'
 ---
 
 
@@ -51,7 +51,7 @@ public class Main{
 
 ```
 
-![img1](../image/java8interface/img1.png)
+![img1](./java8-interface1.png)
 
 
 `default` 키워드로 정의한 메서드는 오버라이드를 하지 않고 사용할 수 있으며 오류 또한 발생하지 않습니다.
@@ -74,7 +74,7 @@ public class Main{
 
 ```
 
-![img2](../image/java8interface/img1.png)
+![img2](./java8-interface2.png)
 
 `static`의 경우 인터페이스를 상속받은 구현체가 아닌 인터페이스를 통해서 접근할 수 있습니다.
 

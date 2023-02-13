@@ -1,19 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import tw, {styled} from "twin.macro";
 
 
 
+const PostItemWrapper = styled(Link)`${tw`flex flex-col rounded-xl shadow-[0_0_8px_rgba(0,0,0,0.15)] text-gray-600 no-underline transition duration-300 ease-out cursor-pointer hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:-translate-x-1 hover:-translate-y-1`}`
+const ThumbnailImage = styled(GatsbyImage)`${tw`w-full h-56 rounded-t-lg object-cover`}`
+const PostItemContent = styled.div`${tw`flex flex-1 flex-col bg-[#1D1811] p-4`}`
+const Title = styled.div`${tw`overflow-hidden text-ellipsis whitespace-normal break-words text-[1.2rem] text-[#ddddde] font-bold  mb-1`} display: '-webkit-box' webkit-line-clamp: 2 webkit-box-orient: 'vertical`
+const Date = styled.div`${tw`text-[0.85rem] text-[#ddddde] font-normal opacity-70`}`
+const Category = styled.div`${tw`flex flex-wrap my-3 mx-[-0.2rem]`}`
+const CategoryItem = styled.div`${tw`my-1 mx-1 py-[3px] px-[5px] rounded-sm bg-black text-[14px] font-bold text-[#888888]`}`
+const Summary = styled.div`${tw`overflow-hidden mt-auto text-ellipsis whitespace-normal break-words text-[16px] text-[#ddddde] opacity-80`} display: '-webkit-box' webkit-line-clamp: 4 webkit-box-orient: 'vertical`
 
 
-const PostItemWrapper = (props) => <Link data-component={'PostItemWrapper'} className={`flex flex-col rounded-xl shadow-[0_0_8px_rgba(0,0,0,0.15)] text-gray-600 no-underline transition duration-300 ease-out cursor-point hover:shadow-[0_0_15px_rgba(0,0,0,0.3)] hover:-translate-x-1 hover:-translate-y-1 `} {...props}>{props.children}</Link>
-const ThumbnailImage = (props) => <GatsbyImage data-component={'ThumbnailImage'} className={`w-full h-52 rounded-t-lg object-cover`} {...props} />
-const PostItemContent = (props) => <div data-component={'PostItemContent'} className={`flex flex-1 flex-col bg-[#1D1811] p-4`}>{props.children}</div>
-const Title = (props) => <div data-component={'Title'} style={{display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical"}} className={`overflow-hidden text-ellipsis whitespace-normal break-words text-[1.2rem] text-[#ddddde] font-bold  mb-1`}>{props.children}</div>
-const Date = (props) => <div data-component={'Date'} className={`text-[0.85rem] text-[#ddddde] font-normal opacity-70`}>{props.children}</div>
-const Category = (props) => <div data-component={'Category'} className={`flex flex-wrap my-3 mx-[-0.2rem]`}>{props.children}</div>
-const CategoryItem = (props) => <div data-component={'CategoryItem'} className={`my-1 mx-1 py-[3px] px-[5px] rounded-sm bg-black text-[14px] font-bold text-[#888888]`}>{props.children}</div>
-const Summary = (props) => <div data-component={'Summary'} style={{display: "-webkit-box", WebkitLineClamp: 4, WebkitBoxOrient: "vertical"}} className={`overflow-hidden mt-auto text-ellipsis whitespace-normal break-words text-[16px] text-[#ddddde] opacity-80`}>{props.children}</div>
 
 export type PostFrontmatterType = {
     title: string
@@ -45,16 +46,16 @@ const PostItem = (
 ) => {
 
     return (
-        <PostItemWrapper to={link}>
-            <ThumbnailImage image={gatsbyImageData} alt={"Post Thumbnail"} />
+        <PostItemWrapper data-component={'PostItemWrapper'} to={link}>
+            <ThumbnailImage data-component={'ThumbnailImage'} image={gatsbyImageData} alt={"Post Thumbnail"} />
 
-            <PostItemContent>
-                <Title>{title}</Title>
-                <Date>{date}</Date>
-                <Category>
-                    {categories.map(c => <CategoryItem key={c}>{c}</CategoryItem>)}
+            <PostItemContent data-component={'PostItemContent'}>
+                <Title data-component={'Title'}>{title}</Title>
+                <Date data-component={'Date'}>{date}</Date>
+                <Category data-component={'Category'}>
+                    {categories.map(c => <CategoryItem key={c} data-component={'CategoryItem'}>{c}</CategoryItem>)}
                 </Category>
-                <Summary>{summary}</Summary>
+                <Summary data-component={'Summary'}>{summary}</Summary>
             </PostItemContent>
         </PostItemWrapper>
     )

@@ -1,11 +1,11 @@
-import React, { useMemo, useState } from "react"
-import PostItem, { PostFrontmatterType } from "components/main/PostItem"
-import { md } from "../../styles/helpers/TailwindUtil"
+import React, {useMemo, useState} from "react"
+import PostItem, {PostFrontmatterType} from "components/main/PostItem"
 import Pagination from "@mui/material/Pagination"
+import tw, {styled} from "twin.macro";
 
 
-const PostListWrapper = (props) => <div
-    className={`grid grid-cols-4 gap-4 w-full my-0 mx-auto py-12 px-5 ${md("w-[768px] pt-[50px] px-0 pb-[100px]")}`}>{props.children}</div>
+
+const PostListWrapper = styled.div`${tw`grid grid-cols-post-1 gap-4 my-0 mx-auto py-12 px-5 sm:grid-cols-post-2 md:(grid-cols-post-2 max-w-[1258px] pt-[50px] px-0 pb-[100px]) lg:grid-cols-post-3 xl:grid-cols-post-4`}`
 
 
 export type PostListItemType = {
@@ -35,7 +35,7 @@ const PostList = (
     const [page, setPage] = useState(1)
     const filteredPostByCategory = useMemo(
         () =>
-            posts.filter(({ node: { frontmatter: { categories } } }: PostListItemType) =>
+            posts.filter(({node: {frontmatter: {categories}}}: PostListItemType) =>
                 selectedCategory !== "All"
                     ? categories.includes(selectedCategory)
                     : true
@@ -49,34 +49,35 @@ const PostList = (
     }
 
     return (
-        <PostListWrapper>
-            {filteredPostByCategory
-                .slice((page - 1) * pageSize, page * pageSize)
-                .map((
-                    {
-                        node: {
-                            id,
-                            fields: { slug },
-                            frontmatter
-                        }
+        <>
+            <PostListWrapper>
+                {filteredPostByCategory
+                    .slice((page - 1) * pageSize, page * pageSize)
+                    .map((
+                        {
+                            node: {
+                                id,
+                                fields: {slug},
+                                frontmatter
+                            }
 
-                    }: PostListItemType) =>
-                    <PostItem key={id}
-                              {...frontmatter}
-                              link={slug}
-                    />
-                )}
-            <Pagination className={`col-span-4 justify-self-center mt-10`}
+                        }: PostListItemType) =>
+                        <PostItem key={id}
+                                  {...frontmatter}
+                                  link={slug}
+                        />
+                    )}
+            </PostListWrapper>
+            {/*    TODO pagination*/}
+            <Pagination className={`col-span-4 justify-self-center mb-10`}
                         page={page}
                         onChange={onChange}
                         count={Math.ceil(filteredPostCount / pageSize)}
-                        sx={{
-                            '&.MuiPaginationItem': {
-                                color: 'white'
-                            }
-                        }}
+                        color={"primary"}
+                        variant={"outlined"}
+                        shape={"rounded"}
             />
-        </PostListWrapper>
+        </>
     )
 }
 

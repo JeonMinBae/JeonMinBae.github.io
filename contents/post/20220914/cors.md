@@ -3,7 +3,7 @@ date: '2022-09-14'
 title: 'Cors'
 categories: ['Http']
 summary: 'cors의 동작에 대해 알아보기'
-thumbnail: './test.png'
+thumbnail: 'cors_thumbnail.png'
 ---
 
 # CORS(교차 출처 리소스 공유)
@@ -11,7 +11,7 @@ thumbnail: './test.png'
 ---
 
 
-![img](../image/cors/img.png)
+![img](./cors.png)
 
 **Origin**: `protocol` + `host` [ +`port`] 를 의미 
 
@@ -23,14 +23,14 @@ thumbnail: './test.png'
 
 # CORS(Cross-Origin Resource Sharing)
 
-![img1](../image/cors/img1.png)
+![img1](./cors1.png)
 
 - 응답 헤더에 유효한 `Access-Control-Allow-Origin` 값의 존재 여부 판단
 - 브라우저에 구현되어있는 정책 - 서버가 정상응답하더라도 CORS가 발생할 수 있음
 
 ## Preflight Request
 
-![img2](../image/cors/img2.png)
+![img2](./cors2.png)
 
 - **preflight**: 본 요청을 보내기 전에 먼저 보내는 예비 요청, METHOED: `OPTIONS`
 - 예비 요청의 역할은 본 요청을 보내기 전에 브라우저 스스로 이 요청을 보내는 것이 안전한지 확인하는 것
@@ -38,7 +38,7 @@ thumbnail: './test.png'
 
 ## Simple Request
 
-![img3](../image/cors/img3.png)
+![img3](./cors3.png)
 
 - preflight와 전반적인 로직은 같으나 예비 요청의 존재 유무만 다름
 - 특정 조건을 모두 만족하는 경우에만 예비 요청을 생략 가능
