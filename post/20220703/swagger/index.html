@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.24.1"/><meta data-react-helmet="true" name="description" content="많은 배움이 필요한 개발자입니다."/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="Swagger"/><meta data-react-helmet="true" property="og:description" content="스웨거 어노테이션"/><meta data-react-helmet="true" property="og:image"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="Swagger"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="Swagger"/><meta data-react-helmet="true" name="twitter:description" content="스웨거 어노테이션"/><meta data-react-helmet="true" name="twitter:image"/><meta data-react-helmet="true" name="twitter:site" content="Hardy"/><meta data-react-helmet="true" name="twitter:creator" content="Hardy"/><style data-href="/styles.7c91b3763d04f932bdba.css" data-identity="gatsby-global-css">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.right-8{right:2rem}.z-\[1\]{z-index:1}.col-span-4{grid-column:span 4/span 4}.mx-auto{margin-left:auto;margin-right:auto}.my-3{margin-bottom:.75rem;margin-top:.75rem}.mx-\[-0\.2rem\]{margin-left:-.2rem;margin-right:-.2rem}.my-1{margin-bottom:.25rem;margin-top:.25rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.my-0{margin-bottom:0;margin-top:0}.mt-7{margin-top:1.75rem}.mt-auto{margin-top:auto}.mt-36{margin-top:9rem}.mr-4{margin-right:1rem}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-5{margin-bottom:1.25rem}.mt-2{margin-top:.5rem}.mt-24{margin-top:6rem}.mt-2\.5{margin-top:.625rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.table{display:table}.grid{display:grid}.h-screen{height:100vh}.h-full{height:100%}.h-56{height:14rem}.h-\[7\.5rem\]{height:7.5rem}.h-\[5rem\]{height:5rem}.h-\[300px\]{height:300px}.h-\[400px\]{height:400px}.h-\[25rem\]{height:25rem}.h-10{height:2.5rem}.w-full{width:100%}.w-\[768px\]{width:768px}.w-\[7\.5rem\]{width:7.5rem}.w-\[5rem\]{width:5rem}.w-10{width:2.5rem}.w-auto{width:auto}.max-w-\[1258px\]{max-width:1258px}.flex-1{flex:1 1 0%}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.grid-cols-post-1{grid-template-columns:repeat(1,minmax(20rem,1fr))}.grid-cols-post-2{grid-template-columns:repeat(2,minmax(20rem,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.justify-self-center{justify-self:center}.overflow-hidden{overflow:hidden}.text-ellipsis{text-overflow:ellipsis}.whitespace-normal{white-space:normal}.break-words{overflow-wrap:break-word}.rounded-xl{border-radius:.75rem}.rounded-sm{border-radius:.125rem}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-t-lg{border-top-left-radius:.5rem;border-top-right-radius:.5rem}.border-0{border-width:0}.border{border-width:1px}.border-2{border-width:2px}.border-t{border-top-width:1px}.border-solid{border-style:solid}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81/var(--tw-border-opacity))}.border-gray-400{--tw-border-opacity:1;border-color:rgb(156 163 175/var(--tw-border-opacity))}.bg-\[\#11161d\]{--tw-bg-opacity:1;background-color:rgb(17 22 29/var(--tw-bg-opacity))}.bg-\[\#1D1811\]{--tw-bg-opacity:1;background-color:rgb(29 24 17/var(--tw-bg-opacity))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity))}.bg-\[\#0d1117\]{--tw-bg-opacity:1;background-color:rgb(13 17 23/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-gray-400{--tw-bg-opacity:1;background-color:rgb(156 163 175/var(--tw-bg-opacity))}.from-\[\#29323c\]{--tw-gradient-from:#29323c;--tw-gradient-to:rgba(41,50,60,0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-\[\#485563\]{--tw-gradient-to:#485563}.object-cover{-o-object-fit:cover;object-fit:cover}.p-4{padding:1rem}.p-3{padding:.75rem}.py-\[50px\]{padding-bottom:50px;padding-top:50px}.px-0{padding-left:0;padding-right:0}.py-1{padding-bottom:.25rem;padding-top:.25rem}.py-\[3px\]{padding-bottom:3px;padding-top:3px}.px-\[5px\]{padding-left:5px;padding-right:5px}.py-12{padding-bottom:3rem;padding-top:3rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0{padding-bottom:0;padding-top:0}.px-3{padding-left:.75rem;padding-right:.75rem}.pt-\[50px\]{padding-top:50px}.pb-\[100px\]{padding-bottom:100px}.pt-16{padding-top:4rem}.text-center{text-align:center}.text-\[9\.5rem\]{font-size:9.5rem}.text-8xl{font-size:6rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-\[1rem\]{font-size:1rem}.text-\[0\.8rem\]{font-size:.8rem}.text-\[1\.125rem\]{font-size:1.125rem}.text-\[1\.2rem\]{font-size:1.2rem}.text-\[0\.85rem\]{font-size:.85rem}.text-\[14px\]{font-size:14px}.text-\[16px\]{font-size:16px}.text-\[1\.5rem\]{font-size:1.5rem}.text-\[2\.2rem\]{font-size:2.2rem}.text-\[1\.25rem\]{font-size:1.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.font-extrabold{font-weight:800}.font-bold{font-weight:700}.font-\[800\]{font-weight:800}.font-\[400\],.font-normal{font-weight:400}.leading-4{line-height:1rem}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity))}.text-\[\#c5c6c7\]{--tw-text-opacity:1;color:rgb(197 198 199/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.text-stone-500{--tw-text-opacity:1;color:rgb(120 113 108/var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity))}.text-\[\#ddddde\]{--tw-text-opacity:1;color:rgb(221 221 222/var(--tw-text-opacity))}.text-\[\#888888\]{--tw-text-opacity:1;color:rgb(136 136 136/var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.underline{text-decoration-line:underline}.no-underline{text-decoration-line:none}.opacity-70{opacity:.7}.opacity-80{opacity:.8}.shadow-\[0_0_8px_rgba\(0\2c 0\2c 0\2c 0\.15\)\]{--tw-shadow:0 0 8px rgba(0,0,0,.15);--tw-shadow-colored:0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.brightness-\[0\.25\]{--tw-brightness:brightness(0.25)}.brightness-\[0\.25\],.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-300{transition-duration:.3s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}html{background-color:#11161d;color:#f5f5f5}.last-of-type\:mr-0:last-of-type{margin-right:0}.hover\:-translate-x-1:hover{--tw-translate-x:-0.25rem}.hover\:-translate-x-1:hover,.hover\:-translate-y-1:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem}.hover\:shadow-\[0_0_15px_rgba\(0\2c 0\2c 0\2c 0\.3\)\]:hover{--tw-shadow:0 0 15px rgba(0,0,0,.3);--tw-shadow-colored:0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media (min-width:640px){.sm\:grid-cols-post-2{grid-template-columns:repeat(2,minmax(20rem,1fr))}}@media (min-width:1024px){.lg\:grid-cols-post-3{grid-template-columns:repeat(3,minmax(20rem,1fr))}}@media (min-width:1280px){.xl\:grid-cols-post-4{grid-template-columns:repeat(4,minmax(20rem,1fr))}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:0 0;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><title data-react-helmet="true">JeonMinBae&#x27;s Blog</title><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="canonical" href="https://jeonminbae.github.io/post/20220703/swagger/" data-baseprotocol="https:" data-basehost="jeonminbae.github.io"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 5u72ad">.css-5u72ad{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;--tw-text-opacity:1;color:rgb(197 198 199 / var(--tw-text-opacity));}</style><main data-component="Container" class="css-5u72ad e1oj83b30"><aside><button>MENU</button><style data-emotion="css a3xyjy">.css-a3xyjy{z-index:1200;}</style></aside><div data-component="PostHeadWrapper" class="w-full h-[25rem] relative"><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained brightness-[0.25] object-cover w-full h-[25rem] relative"><div style="max-width:367px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;137&#x27; width=&#x27;367&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABtUlEQVQoz12S3UuTYRiH33/B0oT3fU1FPJppeNDBglLM+VmCIjsQkwj7wETd2iaJOi3FwdLlUIjsQBwFnjSSoA/3bpNJcx+oHUR2EgoeTLR/4YrnUaZ2cHHfPDf8uLnuR3GENQbXVPo+63QvF/E4eBlnRJWImSui4zyD6xwF2V7MHGEVRYR1LxfSMFFBzUgFFncl7fOlMswRURkIXZTYjFyJ6PtDF07IyVabkYczoqHYvunUT5h4ttSDZfwKPW+s3J1poWNRYyhWgHejGm/iJlNxM564GW+iCl+qDl/Sgj/dxEyyFl/KwuT3a9iNSygPP6i0eW4wvTJK12wjg4EHDAV6uf1KY3i9mPh+gO3MCluZj2xmguwcRfl5uEp07zW//67x68jgx8EnGSy2V/q/6NS/KGfkfR+1Y2U8WbByf7Yd61uxoS43fJmoZjpZI1nY7iC8O4ex6+frHy/+dDOe+HXpM+uwa6mIO5Nmbo1epfm5mVafCfuqJg8j3EiPxrE74XFsvRx3rAx3zMSAfMuTYdKhaEToo6BO52IJ994V8jSk4ooeX/n/C4sqXNmNfMnpL9Dkhv8AKU9RV/kDK0UAAAAASUVORK5CYII=" alt=""/><picture><source type="image/webp" data-srcset="/static/f06f2e579c449c351a12ebac28f43ed9/7426c/swagger_thumbnail.webp 92w,/static/f06f2e579c449c351a12ebac28f43ed9/e19ac/swagger_thumbnail.webp 184w,/static/f06f2e579c449c351a12ebac28f43ed9/7ece1/swagger_thumbnail.webp 367w" sizes="(min-width: 367px) 367px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 367px) 367px, 100vw" decoding="async" loading="lazy" data-src="/static/f06f2e579c449c351a12ebac28f43ed9/99d05/swagger_thumbnail.png" data-srcset="/static/f06f2e579c449c351a12ebac28f43ed9/6db4e/swagger_thumbnail.png 92w,/static/f06f2e579c449c351a12ebac28f43ed9/02bd1/swagger_thumbnail.png 184w,/static/f06f2e579c449c351a12ebac28f43ed9/99d05/swagger_thumbnail.png 367w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/f06f2e579c449c351a12ebac28f43ed9/7426c/swagger_thumbnail.webp 92w,/static/f06f2e579c449c351a12ebac28f43ed9/e19ac/swagger_thumbnail.webp 184w,/static/f06f2e579c449c351a12ebac28f43ed9/7ece1/swagger_thumbnail.webp 367w" sizes="(min-width: 367px) 367px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 367px) 367px, 100vw" decoding="async" loading="lazy" src="/static/f06f2e579c449c351a12ebac28f43ed9/99d05/swagger_thumbnail.png" srcSet="/static/f06f2e579c449c351a12ebac28f43ed9/6db4e/swagger_thumbnail.png 92w,/static/f06f2e579c449c351a12ebac28f43ed9/02bd1/swagger_thumbnail.png 184w,/static/f06f2e579c449c351a12ebac28f43ed9/99d05/swagger_thumbnail.png 367w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><div data-component="PostHeadInfoWrapper" class="z-[1] relative flex flex-col w-[768px] h-full mx-auto my-0 px-0 pt-16 text-white"><div data-component="PrevPageIcon" class="grid place-items-center w-10 h-10 rounded-full bg-white text-xl cursor-pointer text-black"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><div data-component="Title" class="overflow-hidden break-words mt-24 text-ellipsis whitespace-normal text-4xl font-extrabold" style="display:-webkit-box;-webkit-line-clamp:2px;-webkit-box-orient:vertical">Swagger</div><div data-component="PostData" class="flex justify-between items-center mt-2.5 text-lg font-bold "><div>Spring</div><div>2022.07.03.</div></div></div></div><style data-emotion="css ibiah9">.css-ibiah9{margin-left:auto;margin-right:auto;margin-top:1.25rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:768px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;border-radius:0.25rem;border-width:2px;border-style:solid;--tw-border-opacity:1;border-color:rgb(156 163 175 / var(--tw-border-opacity));}@media (min-width: 1280px){.css-ibiah9{position:fixed;right:2rem;display:block;width:auto;}}</style><div data-component="TocWrapper" class="css-ibiah9 ec99ick2"><style data-emotion="css 6vfa4v">.css-6vfa4v{--tw-bg-opacity:1;background-color:rgb(156 163 175 / var(--tw-bg-opacity));padding:0.75rem;text-align:center;--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity));}</style><div data-component="TocTitle`" class="css-6vfa4v ec99ick1">Table of Contents</div><style data-emotion="css 2hbenw">.css-2hbenw a{max-width:9rem;display:block;padding:0.3rem 2rem;color:#c5c5c7;-webkit-text-decoration:none;text-decoration:none;}.css-2hbenw p{margin:0;}.css-2hbenw ul{padding:0;margin:0;list-style-type:none;}.css-2hbenw ul ul a{padding-left:3rem;}.css-2hbenw li{padding:0.1rem 0;width:100%;border-top:1px solid #BDC3C7;}.css-2hbenw li a:hover{-webkit-transition:color 0.3s;transition:color 0.3s;color:white;background-color:gray;}</style><div class="css-2hbenw ec99ick0"><ul>
+<li><a href="#%EC%8A%A4%EC%9B%A8%EA%B1%B0">스웨거</a></li>
+</ul></div></div><style data-emotion="css 1thjx3w">.css-1thjx3w{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-1thjx3w p{padding:3px 0;}.css-1thjx3w h1,.css-1thjx3w h2,.css-1thjx3w h3{font-weight:800;margin-bottom:20px;}.css-1thjx3w hr+h1,.css-1thjx3w hr+h2,.css-1thjx3w hr+h3{margin-top:0;}.css-1thjx3w h1{font-size:30px;}.css-1thjx3w h2{font-size:25px;}.css-1thjx3w h3{font-size:20px;}.css-1thjx3w blockquote{margin:30px 0;padding:15px;border-left:3px solid #a0a0a0;background-color:#22262d;font-weight:500;}.css-1thjx3w ol,.css-1thjx3w ul{margin-left:20px;padding:0;}.css-1thjx3w hr{margin:50px 0;}.css-1thjx3w a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;margin:0;}.css-1thjx3w table{border:1px solid rgb(226 232 240);border-collapse:collapse;}.css-1thjx3w thead{color:white;background-color:#888888;}.css-1thjx3w th,.css-1thjx3w td{padding:0.5rem;}.css-1thjx3w td{border:1px solid rgb(226 232 240);}.css-1thjx3w .language-text{color:orangered;background-color:#000000;border-radius:0.25rem;font-size:0.875rem;padding:0.1rem 0.3rem;}.css-1thjx3w pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-1thjx3w pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-1thjx3w code[class*='language-'],.css-1thjx3w pre[class*='language-']{tab-size:2;}</style><section class="css-1thjx3w ek55sos0"><h1 id="스웨거" style="position:relative;">스웨거<a href="#%EC%8A%A4%EC%9B%A8%EA%B1%B0" aria-label="스웨거 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<ul>
+<li>
+<p><code class="language-text">@ApiOperation</code>: api의 이름과 설명을 기재</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>
+    value <span class="token operator">=</span> <span class="token string">"로그인"</span><span class="token punctuation">,</span>
+    notes <span class="token operator">=</span> <span class="token string">"로그인을 시도 로그인 성공 시 \n"</span> <span class="token operator">+</span>
+        <span class="token string">"accessToken은 Authorization헤더에 refreshToken을 식별할 수 있는 uuid는 refresh쿠키에 저장하여 응답한다.\n"</span> <span class="token operator">+</span>
+        <span class="token string">"쿠키의 경우 httpOnly로 브라우저에서 접근할 수 없다.\n"</span> <span class="token operator">+</span>
+        <span class="token string">"이미 로그인된 경우 409 Error를 반환한다.\n"</span> <span class="token operator">+</span>
+        <span class="token string">"requestBody에 pushOut을 true로 넘길 경우 기존 로그인을 종료 시키고 새로 로그인한다."</span>
+<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">"/sign-in"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">ResponseEntity</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span></span> <span class="token function">signIn</span><span class="token punctuation">(</span>
+    <span class="token class-name">HttpServletResponse</span> httpServletResponse<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@Valid</span> <span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">SignInDto</span> signInDto
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">TokenDto</span> tokenDto <span class="token operator">=</span> authService<span class="token punctuation">.</span><span class="token function">signIn</span><span class="token punctuation">(</span>signInDto<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    httpServletResponse<span class="token punctuation">.</span><span class="token function">addHeader</span><span class="token punctuation">(</span><span class="token class-name">TokenProvider</span><span class="token punctuation">.</span><span class="token constant">AUTHORIZATION_HEADER_NAME</span><span class="token punctuation">,</span>  <span class="token class-name">TokenProvider</span><span class="token punctuation">.</span><span class="token constant">TOKEN_PREFIX</span> <span class="token operator">+</span> tokenDto<span class="token punctuation">.</span><span class="token function">getTokenPair</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAccessToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token class-name">ResponseEntity</span><span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span>tokenDto<span class="token punctuation">.</span><span class="token function">getHttpHeaders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span><span class="token string">"success"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9de92a03a87179a26e61df7f3cd29856/bcd18/swagger.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 21.354166666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAo0lEQVQY033NywrCMBSE4b7/owmKaFHEu9YmaS6NSZO6+8UquqqLjzkDA6coxY5NfaRWCmk0xjtin4h995F+PY/oO0J+KyZyxUJuuRrB1UluXiGjQXV2IINGBD3cTXL/dY7iUF2Ylktm65L5ZsX6uGNfnzk3N06qGh5VVqCixeQWk0ZkP2ShgkW4BtlqaqvQwaKD+2rznfsj4vsw6rVxyWOT5wnBei3WjlToAQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/9de92a03a87179a26e61df7f3cd29856/a59e9/swagger.webp 192w,
+/static/9de92a03a87179a26e61df7f3cd29856/0ca9f/swagger.webp 384w,
+/static/9de92a03a87179a26e61df7f3cd29856/dc9b9/swagger.webp 768w,
+/static/9de92a03a87179a26e61df7f3cd29856/e2c2f/swagger.webp 1152w,
+/static/9de92a03a87179a26e61df7f3cd29856/87e47/swagger.webp 1241w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/9de92a03a87179a26e61df7f3cd29856/3b721/swagger.png 192w,
+/static/9de92a03a87179a26e61df7f3cd29856/66595/swagger.png 384w,
+/static/9de92a03a87179a26e61df7f3cd29856/fe486/swagger.png 768w,
+/static/9de92a03a87179a26e61df7f3cd29856/d2d74/swagger.png 1152w,
+/static/9de92a03a87179a26e61df7f3cd29856/bcd18/swagger.png 1241w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/9de92a03a87179a26e61df7f3cd29856/fe486/swagger.png"
+            alt="img"
+            title="img"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+</li>
+<li>
+<p><code class="language-text">@ApiModelProperty</code>: 응답 객체필드에 대한 명세를 기재</p>
+<ul>
+<li>name: 속성의 이름을 재정의 할 수 있게 함</li>
+<li>example: 속성 값에 대한 예시를 보여줌</li>
+<li>notes: 속성 값에 대한 설명을 기재</li>
+<li>required: 필수 여부</li>
+<li>hidden: 필드를 스웨거 문서에서 숨김처리</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@Getter</span>
+<span class="token annotation punctuation">@Setter</span>
+<span class="token annotation punctuation">@Builder</span>
+<span class="token annotation punctuation">@NoArgsConstructor</span>
+<span class="token annotation punctuation">@AllArgsConstructor</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SignInDto</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@ApiModelProperty</span><span class="token punctuation">(</span>
+        name <span class="token operator">=</span> <span class="token string">"사용자 아이디"</span><span class="token punctuation">,</span>
+        example <span class="token operator">=</span> <span class="token string">"example@example.com"</span><span class="token punctuation">,</span>
+        notes <span class="token operator">=</span> <span class="token string">"사용자의 아이디며 이메일 형식을 가진다."</span>
+    <span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@NotBlank</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userId<span class="token punctuation">;</span>
+    
+    <span class="token annotation punctuation">@NotBlank</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userPassword<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Boolean</span> pushOut<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 530px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/12885baaa6601d1bba22a3dde319ee25/a0177/swagger2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 78.125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABo0lEQVQ4y6WTUY+iMBSF/f9/apJ52cm+zCYqZUAQRKGVQgEFQU3O5F4Eh2STYXYfvpQ27WnPPZfF9XpF23ZQ6og4jnE+n9G2LS6Xyz+x6AVbSKUQRRFOpxO6ruM1uqjtOp7PZRSkyfA93NY0DVPX9WwWg2U6uNvtYFkWhBA8UgmUUsjzfDbjC0lQa40kSSClZLIs401lWc5m8dUm2b7f77jdbsywPlifw0Rwu91iuVzCtm22TCH9l2X1SJpqdzgckKYpbyqKYjYTQRqH+bBGyVFvzmUiSCm7rosgDDgUrbPRSlEY5keWpUzw6+03Xl5e4Xs+cmNgTC8i7D1W6x3SNENZFjDmadM89hEsSOnScyn2OE4QBCEyrUcxGoXw8P5HcFtReITv+wjDkOtOLTYRpFrR4aoqWbyqKr5gCIVK4bgOHGcDS9hYrSys1wJCfMC2HQ6USjIRpBuiaA934zHBNkBh+hd63h4bj5LXXFvqAPqmkX6ILMufL2wfgsfjEVIqtn2IE8hEjsVWSkPKdFKGJ38JhRqbrJJw0/R8bZm67vmubT4B0/LAs7Ur6WAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/12885baaa6601d1bba22a3dde319ee25/a59e9/swagger2.webp 192w,
+/static/12885baaa6601d1bba22a3dde319ee25/0ca9f/swagger2.webp 384w,
+/static/12885baaa6601d1bba22a3dde319ee25/010e6/swagger2.webp 530w"
+              sizes="(max-width: 530px) 100vw, 530px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/12885baaa6601d1bba22a3dde319ee25/3b721/swagger2.png 192w,
+/static/12885baaa6601d1bba22a3dde319ee25/66595/swagger2.png 384w,
+/static/12885baaa6601d1bba22a3dde319ee25/a0177/swagger2.png 530w"
+            sizes="(max-width: 530px) 100vw, 530px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/12885baaa6601d1bba22a3dde319ee25/a0177/swagger2.png"
+            alt="img1"
+            title="img1"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+</li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 530px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/12885baaa6601d1bba22a3dde319ee25/a0177/swagger2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 78.125%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAABo0lEQVQ4y6WTUY+iMBSF/f9/apJ52cm+zCYqZUAQRKGVQgEFQU3O5F4Eh2STYXYfvpQ27WnPPZfF9XpF23ZQ6og4jnE+n9G2LS6Xyz+x6AVbSKUQRRFOpxO6ruM1uqjtOp7PZRSkyfA93NY0DVPX9WwWg2U6uNvtYFkWhBA8UgmUUsjzfDbjC0lQa40kSSClZLIs401lWc5m8dUm2b7f77jdbsywPlifw0Rwu91iuVzCtm22TCH9l2X1SJpqdzgckKYpbyqKYjYTQRqH+bBGyVFvzmUiSCm7rosgDDgUrbPRSlEY5keWpUzw6+03Xl5e4Xs+cmNgTC8i7D1W6x3SNENZFjDmadM89hEsSOnScyn2OE4QBCEyrUcxGoXw8P5HcFtReITv+wjDkOtOLTYRpFrR4aoqWbyqKr5gCIVK4bgOHGcDS9hYrSys1wJCfMC2HQ6USjIRpBuiaA934zHBNkBh+hd63h4bj5LXXFvqAPqmkX6ILMufL2wfgsfjEVIqtn2IE8hEjsVWSkPKdFKGJ38JhRqbrJJw0/R8bZm67vmubT4B0/LAs7Ur6WAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/12885baaa6601d1bba22a3dde319ee25/a59e9/swagger2.webp 192w,
+/static/12885baaa6601d1bba22a3dde319ee25/0ca9f/swagger2.webp 384w,
+/static/12885baaa6601d1bba22a3dde319ee25/010e6/swagger2.webp 530w"
+              sizes="(max-width: 530px) 100vw, 530px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/12885baaa6601d1bba22a3dde319ee25/3b721/swagger2.png 192w,
+/static/12885baaa6601d1bba22a3dde319ee25/66595/swagger2.png 384w,
+/static/12885baaa6601d1bba22a3dde319ee25/a0177/swagger2.png 530w"
+            sizes="(max-width: 530px) 100vw, 530px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/12885baaa6601d1bba22a3dde319ee25/a0177/swagger2.png"
+            alt="img2"
+            title="img2"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<ul>
+<li>
+<p><code class="language-text">@ApiImplicitParam</code> : api의 파라메터에 대한 명세를 기재</p>
+<p><code class="language-text">@ApiImplicitParams</code>로 하나 이상의 파라메터에 대한 정보 기재 가능</p>
+<p><code class="language-text">dataType</code>, <code class="language-text">paramType</code>, <code class="language-text">required</code>의 경우 해당 <code class="language-text">name</code>의 정보가 자동으로 채워지므로 생략 가능</p>
+<ul>
+<li>name: 파라메터의 변수 명</li>
+<li>value: 표시될 파라메터의 값(이름)</li>
+<li>defaultValue: 디폴트 값</li>
+<li>dataType: 파라메터의 타입</li>
+<li>dataTypeClass: 파라메터의 클래스 타입, dataType 존재 시 재정의(덮어쓰기) 함</li>
+<li>paramType: 파라메터의 타입 <code class="language-text">path</code>, <code class="language-text">query</code>, <code class="language-text">body</code>, <code class="language-text">header</code>, <code class="language-text">form</code> 중 하나의 값을 가짐</li>
+<li>required: 필수 여부</li>
+<li>format: 사용자 지정 format을 추가</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@ApiImplicitParam</span><span class="token punctuation">(</span>
+    name <span class="token operator">=</span> <span class="token string">"signInDto"</span><span class="token punctuation">,</span>
+    value <span class="token operator">=</span> <span class="token string">"사용자 로그인 정보"</span><span class="token punctuation">,</span>
+    dataTypeClass <span class="token operator">=</span> <span class="token class-name">SignInDto</span><span class="token punctuation">.</span><span class="token keyword">class</span>
+<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">"/sign-in"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">ResponseEntity</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span></span> <span class="token function">signIn</span><span class="token punctuation">(</span>
+    <span class="token class-name">HttpServletResponse</span> httpServletResponse<span class="token punctuation">,</span>
+    <span class="token annotation punctuation">@Valid</span> <span class="token annotation punctuation">@RequestBody</span> <span class="token class-name">SignInDto</span> signInDto
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">TokenDto</span> tokenDto <span class="token operator">=</span> authService<span class="token punctuation">.</span><span class="token function">signIn</span><span class="token punctuation">(</span>signInDto<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    httpServletResponse<span class="token punctuation">.</span><span class="token function">addHeader</span><span class="token punctuation">(</span><span class="token class-name">TokenProvider</span><span class="token punctuation">.</span><span class="token constant">AUTHORIZATION_HEADER_NAME</span><span class="token punctuation">,</span>  <span class="token class-name">TokenProvider</span><span class="token punctuation">.</span><span class="token constant">TOKEN_PREFIX</span> <span class="token operator">+</span> tokenDto<span class="token punctuation">.</span><span class="token function">getTokenPair</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getAccessToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token class-name">ResponseEntity</span><span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span>tokenDto<span class="token punctuation">.</span><span class="token function">getHttpHeaders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span><span class="token string">"success"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 371px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c80c83e24c7785a994ddc9b9ba5eba8d/d86da/swagger3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.77083333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjUlEQVQoz5WR227bMBBE/f9fVfSlaVGksRHfZEixrhZJkZRESqJtuVNw7VhG8pI+HKyAXc3OLGen0wmDc1BdjWF0cJcjhvGKPfawx+6/mF0FB/qZc4F9kiJJc6RZAXd0uPy9YLyMX+YuaJxFawwOJQPjAlxU5NwPncfzl5m9R+ZWwZw62HNP1VMPLXTfEP67ceaO7qfeI3fB0lQoNEeuGIRVEJ1C1WlC9hqsrZBrRn2aufU+8uBQYhuHWOw2kH0NNTSo+ppQrkUuS8y3a8yDNRbBGqyVNDctrSG7ehJkRpIzbiQyWeJQC4hGQGhGVFZBu5bwy0jghrD6msqq6VF8RL/529MPfP/1E08vf8DKGLKMUYmMBPcsI9LqgJjnSESBtzKjc7y7nSJ3CkH6RpETXkC7W2TvZmjAjcLv1wVetits4hCraIdltMPz6hWFYtcTTYIDCYb5Hs/LOaIi/nQf78K7ulIgFQeUTUXLff3kkFkJYSRt4w8RPGqoUTYCyyjAMgywTSJs9iFF9/XR4T85BkMUOVr+CgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/c80c83e24c7785a994ddc9b9ba5eba8d/a59e9/swagger3.webp 192w,
+/static/c80c83e24c7785a994ddc9b9ba5eba8d/25143/swagger3.webp 371w"
+              sizes="(max-width: 371px) 100vw, 371px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/c80c83e24c7785a994ddc9b9ba5eba8d/3b721/swagger3.png 192w,
+/static/c80c83e24c7785a994ddc9b9ba5eba8d/d86da/swagger3.png 371w"
+            sizes="(max-width: 371px) 100vw, 371px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/c80c83e24c7785a994ddc9b9ba5eba8d/d86da/swagger3.png"
+            alt="img3"
+            title="img3"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+</li>
+<li>
+<p><code class="language-text">@ApiIgnore</code> api를 스웨거 문서에서 보이지 않게 함</p>
+<ul>
+<li>value: 문서에서 배제된 사유를 기재</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@ApiIgnore</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"뀨"</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ApiOperation</span><span class="token punctuation">(</span>
+    value <span class="token operator">=</span> <span class="token string">"토큰 리이슈"</span><span class="token punctuation">,</span>
+    notes <span class="token operator">=</span> <span class="token string">"쿠키의 uuid를 가지고 토큰을 리이슈한다."</span>
+<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@PostMapping</span><span class="token punctuation">(</span><span class="token string">"/token/reissue"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">tokenReissue</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+</li>
+<li>
+<p><code class="language-text">@ApiResponse</code> : api의 상태코드값 별 메세지를 설정 가능</p>
+<p><code class="language-text">@ApiResponses</code>로 하나 이상의  상태값에 대한 메세지 설정 가능</p>
+<ul>
+<li>
+<p>code: 응답 상태코드</p>
+</li>
+<li>
+<p>message: 상태코드에 표시될 메세지</p>
+</li>
+<li>
+<p>response: 메시지의 페이로드를 설명하는 선택적 응답 클래스, 응답 메시지 개체의 ‘schema’ 필드에 해당</p>
+</li>
+<li>
+<p>responseHeaders:</p>
+<p><code class="language-text">@ResponseHeader</code></p>
+<ul>
+<li>name: 헤더이름</li>
+<li>response: 헤더의 데이터 타입</li>
+<li>description: 설명</li>
+</ul>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@ApiResponses</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@ApiResponse</span><span class="token punctuation">(</span>
+        code <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">,</span>
+        message <span class="token operator">=</span> <span class="token string">"로그인 성공"</span><span class="token punctuation">,</span>
+        response <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>
+        responseHeaders <span class="token operator">=</span> <span class="token annotation punctuation">@ResponseHeader</span><span class="token punctuation">(</span>
+            name <span class="token operator">=</span> <span class="token string">"Authorization"</span><span class="token punctuation">,</span>
+            description <span class="token operator">=</span> <span class="token string">"jwt 토큰이 전달됨 ex) Bearer eysg3swg..."</span><span class="token punctuation">,</span>
+            response <span class="token operator">=</span> <span class="token class-name">String</span><span class="token punctuation">.</span><span class="token keyword">class</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/78d8ad371d27a884c29009403404861d/13d1f/swagger4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 30.729166666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA00lEQVQY052PzY6CUAxGeVA3biCTMWaMb+TOzMrHcGViNKPxDxQQBIULAled5EwuqImbibo4afu1/dJq8iTxRYgnQqIiIf3NSS4Z6Qvc5oVM0aSUHArBxJzTHw4YL6aMXkTtDGc/rH0HLc9zJGc63S61usFHs43e+EL//Idr32i0StROra7z3euhqZfVhcvtmpm9wto5WL79yM5h7pjljMrNq7ZwLZZupa28DV4UVIbB8YCfhGWMTwmRfA51iOKuFaIyDLMIe++xCdzSVNXvsM9i/gCnTakeWF+pvgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/78d8ad371d27a884c29009403404861d/a59e9/swagger4.webp 192w,
+/static/78d8ad371d27a884c29009403404861d/0ca9f/swagger4.webp 384w,
+/static/78d8ad371d27a884c29009403404861d/dc9b9/swagger4.webp 768w,
+/static/78d8ad371d27a884c29009403404861d/e2c2f/swagger4.webp 1152w,
+/static/78d8ad371d27a884c29009403404861d/64101/swagger4.webp 1518w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/78d8ad371d27a884c29009403404861d/3b721/swagger4.png 192w,
+/static/78d8ad371d27a884c29009403404861d/66595/swagger4.png 384w,
+/static/78d8ad371d27a884c29009403404861d/fe486/swagger4.png 768w,
+/static/78d8ad371d27a884c29009403404861d/d2d74/swagger4.png 1152w,
+/static/78d8ad371d27a884c29009403404861d/13d1f/swagger4.png 1518w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/78d8ad371d27a884c29009403404861d/fe486/swagger4.png"
+            alt="img4"
+            title="img4"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+</li>
+<li>
+<p>responseContainer:</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>참조: <a href="https://kim-jong-hyun.tistory.com/49" target="_blank" rel="nofollow">https://kim-jong-hyun.tistory.com/49,</a> <a href="https://machine-geon.tistory.com/139" target="_blank" rel="nofollow">https://machine-geon.tistory.com/139</a></p>
+</blockquote></section><div></div><style data-emotion="css b9tytq">.css-b9tytq{margin-top:auto;display:grid;width:100%;place-items:center;border-width:0px;border-top-width:1px;border-style:solid;--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity));--tw-bg-opacity:1;background-color:rgb(17 22 29 / var(--tw-bg-opacity));padding-top:50px;padding-bottom:50px;padding-left:0px;padding-right:0px;text-align:center;font-size:0.8rem;line-height:1rem;}@media (min-width: 768px){.css-b9tytq{font-size:1rem;}}</style><footer class="css-b9tytq"><span>Thank You for Visiting and Watching My Blog, Have a Good Day 😆</span><br/><span>© 2022 Developer Hardy, Powered By Gatsby.</span></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/20220703/swagger/";window.___webpackCompilationHash="5efd8716aef266cb0c52";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-c98f86b47ae6c77a2fc9.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-b7d372407a56169a42e9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-abecfabbb33102e0e562.js"],"component---src-pages-info-tsx":["/component---src-pages-info-tsx-356f0905750d3ef422f1.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-f255b7ce215284a964b8.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-c98f86b47ae6c77a2fc9.js" async=""></script><script src="/framework-472130f6e8a3520919b0.js" async=""></script><script src="/webpack-runtime-143654097131bf547f28.js" async=""></script></body></html>

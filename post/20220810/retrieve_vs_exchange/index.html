@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 4.24.1"/><meta data-react-helmet="true" name="description" content="많은 배움이 필요한 개발자입니다."/><meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1.0"/><meta data-react-helmet="true" http-equiv="Content-Type" content="text/html;charset=UTF-8"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:title" content="Webclient에서 retrieve와 exchange의 차이점"/><meta data-react-helmet="true" property="og:description" content="retrieve와 exchange의 차이점과 테스트"/><meta data-react-helmet="true" property="og:image"/><meta data-react-helmet="true" property="og:url"/><meta data-react-helmet="true" property="og:site_name" content="Webclient에서 retrieve와 exchange의 차이점"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:title" content="Webclient에서 retrieve와 exchange의 차이점"/><meta data-react-helmet="true" name="twitter:description" content="retrieve와 exchange의 차이점과 테스트"/><meta data-react-helmet="true" name="twitter:image"/><meta data-react-helmet="true" name="twitter:site" content="Hardy"/><meta data-react-helmet="true" name="twitter:creator" content="Hardy"/><style data-href="/styles.7c91b3763d04f932bdba.css" data-identity="gatsby-global-css">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.right-8{right:2rem}.z-\[1\]{z-index:1}.col-span-4{grid-column:span 4/span 4}.mx-auto{margin-left:auto;margin-right:auto}.my-3{margin-bottom:.75rem;margin-top:.75rem}.mx-\[-0\.2rem\]{margin-left:-.2rem;margin-right:-.2rem}.my-1{margin-bottom:.25rem;margin-top:.25rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.my-0{margin-bottom:0;margin-top:0}.mt-7{margin-top:1.75rem}.mt-auto{margin-top:auto}.mt-36{margin-top:9rem}.mr-4{margin-right:1rem}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-5{margin-bottom:1.25rem}.mt-2{margin-top:.5rem}.mt-24{margin-top:6rem}.mt-2\.5{margin-top:.625rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.table{display:table}.grid{display:grid}.h-screen{height:100vh}.h-full{height:100%}.h-56{height:14rem}.h-\[7\.5rem\]{height:7.5rem}.h-\[5rem\]{height:5rem}.h-\[300px\]{height:300px}.h-\[400px\]{height:400px}.h-\[25rem\]{height:25rem}.h-10{height:2.5rem}.w-full{width:100%}.w-\[768px\]{width:768px}.w-\[7\.5rem\]{width:7.5rem}.w-\[5rem\]{width:5rem}.w-10{width:2.5rem}.w-auto{width:auto}.max-w-\[1258px\]{max-width:1258px}.flex-1{flex:1 1 0%}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.grid-cols-post-1{grid-template-columns:repeat(1,minmax(20rem,1fr))}.grid-cols-post-2{grid-template-columns:repeat(2,minmax(20rem,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.justify-self-center{justify-self:center}.overflow-hidden{overflow:hidden}.text-ellipsis{text-overflow:ellipsis}.whitespace-normal{white-space:normal}.break-words{overflow-wrap:break-word}.rounded-xl{border-radius:.75rem}.rounded-sm{border-radius:.125rem}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-t-lg{border-top-left-radius:.5rem;border-top-right-radius:.5rem}.border-0{border-width:0}.border{border-width:1px}.border-2{border-width:2px}.border-t{border-top-width:1px}.border-solid{border-style:solid}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81/var(--tw-border-opacity))}.border-gray-400{--tw-border-opacity:1;border-color:rgb(156 163 175/var(--tw-border-opacity))}.bg-\[\#11161d\]{--tw-bg-opacity:1;background-color:rgb(17 22 29/var(--tw-bg-opacity))}.bg-\[\#1D1811\]{--tw-bg-opacity:1;background-color:rgb(29 24 17/var(--tw-bg-opacity))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity))}.bg-\[\#0d1117\]{--tw-bg-opacity:1;background-color:rgb(13 17 23/var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-gray-400{--tw-bg-opacity:1;background-color:rgb(156 163 175/var(--tw-bg-opacity))}.from-\[\#29323c\]{--tw-gradient-from:#29323c;--tw-gradient-to:rgba(41,50,60,0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-\[\#485563\]{--tw-gradient-to:#485563}.object-cover{-o-object-fit:cover;object-fit:cover}.p-4{padding:1rem}.p-3{padding:.75rem}.py-\[50px\]{padding-bottom:50px;padding-top:50px}.px-0{padding-left:0;padding-right:0}.py-1{padding-bottom:.25rem;padding-top:.25rem}.py-\[3px\]{padding-bottom:3px;padding-top:3px}.px-\[5px\]{padding-left:5px;padding-right:5px}.py-12{padding-bottom:3rem;padding-top:3rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0{padding-bottom:0;padding-top:0}.px-3{padding-left:.75rem;padding-right:.75rem}.pt-\[50px\]{padding-top:50px}.pb-\[100px\]{padding-bottom:100px}.pt-16{padding-top:4rem}.text-center{text-align:center}.text-\[9\.5rem\]{font-size:9.5rem}.text-8xl{font-size:6rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-\[1rem\]{font-size:1rem}.text-\[0\.8rem\]{font-size:.8rem}.text-\[1\.125rem\]{font-size:1.125rem}.text-\[1\.2rem\]{font-size:1.2rem}.text-\[0\.85rem\]{font-size:.85rem}.text-\[14px\]{font-size:14px}.text-\[16px\]{font-size:16px}.text-\[1\.5rem\]{font-size:1.5rem}.text-\[2\.2rem\]{font-size:2.2rem}.text-\[1\.25rem\]{font-size:1.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.font-extrabold{font-weight:800}.font-bold{font-weight:700}.font-\[800\]{font-weight:800}.font-\[400\],.font-normal{font-weight:400}.leading-4{line-height:1rem}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity))}.text-\[\#c5c6c7\]{--tw-text-opacity:1;color:rgb(197 198 199/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.text-stone-500{--tw-text-opacity:1;color:rgb(120 113 108/var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity))}.text-\[\#ddddde\]{--tw-text-opacity:1;color:rgb(221 221 222/var(--tw-text-opacity))}.text-\[\#888888\]{--tw-text-opacity:1;color:rgb(136 136 136/var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.underline{text-decoration-line:underline}.no-underline{text-decoration-line:none}.opacity-70{opacity:.7}.opacity-80{opacity:.8}.shadow-\[0_0_8px_rgba\(0\2c 0\2c 0\2c 0\.15\)\]{--tw-shadow:0 0 8px rgba(0,0,0,.15);--tw-shadow-colored:0 0 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.brightness-\[0\.25\]{--tw-brightness:brightness(0.25)}.brightness-\[0\.25\],.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-300{transition-duration:.3s}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}html{background-color:#11161d;color:#f5f5f5}.last-of-type\:mr-0:last-of-type{margin-right:0}.hover\:-translate-x-1:hover{--tw-translate-x:-0.25rem}.hover\:-translate-x-1:hover,.hover\:-translate-y-1:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem}.hover\:shadow-\[0_0_15px_rgba\(0\2c 0\2c 0\2c 0\.3\)\]:hover{--tw-shadow:0 0 15px rgba(0,0,0,.3);--tw-shadow-colored:0 0 15px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media (min-width:640px){.sm\:grid-cols-post-2{grid-template-columns:repeat(2,minmax(20rem,1fr))}}@media (min-width:1024px){.lg\:grid-cols-post-3{grid-template-columns:repeat(3,minmax(20rem,1fr))}}@media (min-width:1280px){.xl\:grid-cols-post-4{grid-template-columns:repeat(4,minmax(20rem,1fr))}}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:0 0;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><title data-react-helmet="true">JeonMinBae&#x27;s Blog</title><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><style type="text/css">
+    .custom-class.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .custom-class.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .custom-class svg,
+    h2 .custom-class svg,
+    h3 .custom-class svg,
+    h4 .custom-class svg,
+    h5 .custom-class svg,
+    h6 .custom-class svg {
+      visibility: hidden;
+    }
+    h1:hover .custom-class svg,
+    h2:hover .custom-class svg,
+    h3:hover .custom-class svg,
+    h4:hover .custom-class svg,
+    h5:hover .custom-class svg,
+    h6:hover .custom-class svg,
+    h1 .custom-class:focus svg,
+    h2 .custom-class:focus svg,
+    h3 .custom-class:focus svg,
+    h4 .custom-class:focus svg,
+    h5 .custom-class:focus svg,
+    h6 .custom-class:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 100)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="canonical" href="https://jeonminbae.github.io/post/20220810/retrieve_vs_exchange/" data-baseprotocol="https:" data-basehost="jeonminbae.github.io"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 5u72ad">.css-5u72ad{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;--tw-text-opacity:1;color:rgb(197 198 199 / var(--tw-text-opacity));}</style><main data-component="Container" class="css-5u72ad e1oj83b30"><aside><button>MENU</button><style data-emotion="css a3xyjy">.css-a3xyjy{z-index:1200;}</style></aside><div data-component="PostHeadWrapper" class="w-full h-[25rem] relative"><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained brightness-[0.25] object-cover w-full h-[25rem] relative"><div style="max-width:409px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;123&#x27; width=&#x27;409&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABO0lEQVQY032RTUsCURSG/Q/t3bXvT7QoqEVBq9q2lGgRbaqNbVtagRBkkNOX+EG2SHNGS2dMMpVIQg1x7r2N0294wokRadHi4XIO5zzc+96AlJLXnslV45hk64T3fhMlFUrKMVKIf/HnvpQiYH4U2MjNM5uYYiEVJFxa5+2zgRIS2x54C9+u6+EOhwwdh6Hze/q1sG2PkTQQsXZYzc4Qre2TbsXYNda4qB/iShcpBb1ul6JewDCK6LqOWS7zVDKwqlXMSgXLsjzRWHhQ3mTrYYmXTplap0QoN4dWj3hCIWwG/T6XmsbZaYx4/JxMOs1tJklc07hJXJPP57xXjIXF9h2h+zkWU0GWM9NsF1Zo9mooocZDjuN4+fiZ+X0/61EtfeEoJ6Od5ai6R/Q5TK3ziJhYnGTyI/72/Bv+ALYBmgKguqRpAAAAAElFTkSuQmCC" alt=""/><picture><source type="image/webp" data-srcset="/static/92ec87cfc5d7dff2e44688b35f703aca/3d816/retrieve_vs_exchange_thumbnail.webp 102w,/static/92ec87cfc5d7dff2e44688b35f703aca/2b956/retrieve_vs_exchange_thumbnail.webp 205w,/static/92ec87cfc5d7dff2e44688b35f703aca/d7a2c/retrieve_vs_exchange_thumbnail.webp 409w" sizes="(min-width: 409px) 409px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 409px) 409px, 100vw" decoding="async" loading="lazy" data-src="/static/92ec87cfc5d7dff2e44688b35f703aca/cf374/retrieve_vs_exchange_thumbnail.png" data-srcset="/static/92ec87cfc5d7dff2e44688b35f703aca/0d27d/retrieve_vs_exchange_thumbnail.png 102w,/static/92ec87cfc5d7dff2e44688b35f703aca/2e823/retrieve_vs_exchange_thumbnail.png 205w,/static/92ec87cfc5d7dff2e44688b35f703aca/cf374/retrieve_vs_exchange_thumbnail.png 409w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/92ec87cfc5d7dff2e44688b35f703aca/3d816/retrieve_vs_exchange_thumbnail.webp 102w,/static/92ec87cfc5d7dff2e44688b35f703aca/2b956/retrieve_vs_exchange_thumbnail.webp 205w,/static/92ec87cfc5d7dff2e44688b35f703aca/d7a2c/retrieve_vs_exchange_thumbnail.webp 409w" sizes="(min-width: 409px) 409px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 409px) 409px, 100vw" decoding="async" loading="lazy" src="/static/92ec87cfc5d7dff2e44688b35f703aca/cf374/retrieve_vs_exchange_thumbnail.png" srcSet="/static/92ec87cfc5d7dff2e44688b35f703aca/0d27d/retrieve_vs_exchange_thumbnail.png 102w,/static/92ec87cfc5d7dff2e44688b35f703aca/2e823/retrieve_vs_exchange_thumbnail.png 205w,/static/92ec87cfc5d7dff2e44688b35f703aca/cf374/retrieve_vs_exchange_thumbnail.png 409w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><div data-component="PostHeadInfoWrapper" class="z-[1] relative flex flex-col w-[768px] h-full mx-auto my-0 px-0 pt-16 text-white"><div data-component="PrevPageIcon" class="grid place-items-center w-10 h-10 rounded-full bg-white text-xl cursor-pointer text-black"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><div data-component="Title" class="overflow-hidden break-words mt-24 text-ellipsis whitespace-normal text-4xl font-extrabold" style="display:-webkit-box;-webkit-line-clamp:2px;-webkit-box-orient:vertical">Webclient에서 retrieve와 exchange의 차이점</div><div data-component="PostData" class="flex justify-between items-center mt-2.5 text-lg font-bold "><div>Spring</div><div>2022.08.10.</div></div></div></div><style data-emotion="css ibiah9">.css-ibiah9{margin-left:auto;margin-right:auto;margin-top:1.25rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:768px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;border-radius:0.25rem;border-width:2px;border-style:solid;--tw-border-opacity:1;border-color:rgb(156 163 175 / var(--tw-border-opacity));}@media (min-width: 1280px){.css-ibiah9{position:fixed;right:2rem;display:block;width:auto;}}</style><div data-component="TocWrapper" class="css-ibiah9 ec99ick2"><style data-emotion="css 6vfa4v">.css-6vfa4v{--tw-bg-opacity:1;background-color:rgb(156 163 175 / var(--tw-bg-opacity));padding:0.75rem;text-align:center;--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity));}</style><div data-component="TocTitle`" class="css-6vfa4v ec99ick1">Table of Contents</div><style data-emotion="css 2hbenw">.css-2hbenw a{max-width:9rem;display:block;padding:0.3rem 2rem;color:#c5c5c7;-webkit-text-decoration:none;text-decoration:none;}.css-2hbenw p{margin:0;}.css-2hbenw ul{padding:0;margin:0;list-style-type:none;}.css-2hbenw ul ul a{padding-left:3rem;}.css-2hbenw li{padding:0.1rem 0;width:100%;border-top:1px solid #BDC3C7;}.css-2hbenw li a:hover{-webkit-transition:color 0.3s;transition:color 0.3s;color:white;background-color:gray;}</style><div class="css-2hbenw ec99ick0"><ul>
+<li>
+<p><a href="#retrieve-vs-exchange">retrieve vs exchange</a></p>
+</li>
+<li>
+<p><a href="#webclient%EC%97%90%EC%84%9C-retrieve%EC%99%80-exchange%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%A4%EB%A5%BC%EA%B9%8C">webclient에서 retrieve와 exchange는 어떻게 다를까</a></p>
+<ul>
+<li><a href="#retrieve">retrieve</a></li>
+<li><a href="#exchange">exchange</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8">테스트</a></p>
+<ul>
+<li><a href="#retrieve-1">Retrieve</a></li>
+<li><a href="#exchange-1">Exchange</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%EB%A7%88%EB%AC%B4%EB%A6%AC">마무리</a></p>
+</li>
+</ul></div></div><style data-emotion="css 1thjx3w">.css-1thjx3w{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-1thjx3w p{padding:3px 0;}.css-1thjx3w h1,.css-1thjx3w h2,.css-1thjx3w h3{font-weight:800;margin-bottom:20px;}.css-1thjx3w hr+h1,.css-1thjx3w hr+h2,.css-1thjx3w hr+h3{margin-top:0;}.css-1thjx3w h1{font-size:30px;}.css-1thjx3w h2{font-size:25px;}.css-1thjx3w h3{font-size:20px;}.css-1thjx3w blockquote{margin:30px 0;padding:15px;border-left:3px solid #a0a0a0;background-color:#22262d;font-weight:500;}.css-1thjx3w ol,.css-1thjx3w ul{margin-left:20px;padding:0;}.css-1thjx3w hr{margin:50px 0;}.css-1thjx3w a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;margin:0;}.css-1thjx3w table{border:1px solid rgb(226 232 240);border-collapse:collapse;}.css-1thjx3w thead{color:white;background-color:#888888;}.css-1thjx3w th,.css-1thjx3w td{padding:0.5rem;}.css-1thjx3w td{border:1px solid rgb(226 232 240);}.css-1thjx3w .language-text{color:orangered;background-color:#000000;border-radius:0.25rem;font-size:0.875rem;padding:0.1rem 0.3rem;}.css-1thjx3w pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-1thjx3w pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-1thjx3w code[class*='language-'],.css-1thjx3w pre[class*='language-']{tab-size:2;}</style><section class="css-1thjx3w ek55sos0"><h1 id="retrieve-vs-exchange" style="position:relative;">retrieve vs exchange<a href="#retrieve-vs-exchange" aria-label="retrieve vs exchange permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<hr>
+<h1 id="webclient에서-retrieve와-exchange는-어떻게-다를까" style="position:relative;">webclient에서 retrieve와 exchange는 어떻게 다를까<a href="#webclient%EC%97%90%EC%84%9C-retrieve%EC%99%80-exchange%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%8B%A4%EB%A5%BC%EA%B9%8C" aria-label="webclient에서 retrieve와 exchange는 어떻게 다를까 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<blockquote>
+<p><code class="language-text">exchange</code>는 현재 <em>deprecated</em> 되어 본문의 예제에서는 <code class="language-text">exchangeToMono</code>를 사용합니다.</p>
+</blockquote>
+<p>공식문서에 따르면</p>
+<h2 id="retrieve" style="position:relative;">retrieve<a href="#retrieve" aria-label="retrieve permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<blockquote>
+<p>Perform the HTTP request and retrieve the response body.</p>
+<p>…</p>
+<p>This method is a shortcut to using exchange() and decoding the response body through ClientResponse.</p>
+</blockquote>
+<h2 id="exchange" style="position:relative;">exchange<a href="#exchange" aria-label="exchange permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<ul>
+<li><em>exchange는 현재 deprecated되었고 exchangeToMono와 exchangeToFlux 사용을 권장합니다.</em></li>
+</ul>
+<blockquote>
+<p>Perform the HTTP request and return a ClientResponse with the response status and headers. You can then use methods of the response to consume the body:</p>
+</blockquote>
+<p><code class="language-text">retrieve</code>는 <code class="language-text">ClientResponse</code>를 통해 응답 바디를 디코딩한 <code class="language-text">exchange</code>의 숏컷이며,</p>
+<p><code class="language-text">exchange</code>는 상태코드와 헤더와 함께 <code class="language-text">ClientResponse</code>를 반환합니다.</p>
+<p>제가 이해한대로 풀어보자면 <code class="language-text">retrieve</code>는 응답 바디를 바로 받아볼 수 있는 <code class="language-text">exchange</code>의 편의 메소드이며 <code class="language-text">exchange</code>는 응답 바디뿐만 아니라 헤더와 상태코드까지 받아볼 수 있는 메서드라는 것인데</p>
+<p>그렇다면 <code class="language-text">retrieve</code> 에서는 헤더와 상태코드를 받아볼 수 없는 것일까요</p>
+<p>테스트를 위해 간단한 컨트롤러를 만들었습니다.</p>
+<h1 id="테스트" style="position:relative;">테스트<a href="#%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-label="테스트 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<p>아래는 version이라는 쿼리스트링을 받으며 이 값에 따라 상태코드와 응답바디를 다르게 리턴하는 엔드포인트입니다.</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// 쿼리의 version값에 따라 다른 응답코드와 바디를 리턴하는 엔드포인트</span>
+<span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/return"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">ResponseEntity</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">></span></span> <span class="token function">returnData</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span>required <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token keyword">int</span> version<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span> <span class="token punctuation">></span></span> queryString <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    queryString<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"page"</span><span class="token punctuation">,</span> <span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    queryString<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"size"</span><span class="token punctuation">,</span> <span class="token string">"1231"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    queryString<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"size"</span><span class="token punctuation">,</span> <span class="token string">"1231"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span> <span class="token punctuation">></span></span> credential <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    credential<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"aaaa"</span><span class="token punctuation">,</span> <span class="token string">"aaaaa"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    credential<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"bbbb"</span><span class="token punctuation">,</span> <span class="token string">"bbbbb"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">HttpHeaders</span> headers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HttpHeaders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    headers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"AAAAAAAA"</span><span class="token punctuation">,</span> <span class="token string">"fklsdnafg7i234gyuisv684"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    headers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"BBBBBBBB"</span><span class="token punctuation">,</span> <span class="token string">"gv3jkigh98vwb0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    headers<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"CCCCCCCC"</span><span class="token punctuation">,</span> <span class="token string">"0000000000090000000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>version<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span>
+            <span class="token keyword">return</span> <span class="token class-name">ResponseEntity</span>
+                <span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span>headers<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span>credential<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
+            <span class="token keyword">return</span> <span class="token class-name">ResponseEntity</span>
+                <span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span>headers<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span>credential<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">4</span><span class="token operator">:</span>
+            <span class="token keyword">return</span> <span class="token class-name">ResponseEntity</span>
+                <span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span>headers<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span>queryString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token number">5</span><span class="token operator">:</span>
+            <span class="token keyword">return</span> <span class="token class-name">ResponseEntity</span>
+                <span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span>headers<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span><span class="token string">"gnio4hwg8902349030kzmamamavjih890w44gkuzd"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">default</span><span class="token operator">:</span>
+            <span class="token keyword">return</span> <span class="token class-name">ResponseEntity</span>
+                <span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">headers</span><span class="token punctuation">(</span>headers<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">body</span><span class="token punctuation">(</span>queryString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div>
+<h2 id="retrieve-1" style="position:relative;">Retrieve<a href="#retrieve-1" aria-label="retrieve 1 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>같은 컨트롤러에 다른 엔드포인트를 하나 더 만들어 /return으로 요청하여 값을 검증해보겠습니다.</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/testRetrieve"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">testRetrieve</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span>required <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token keyword">int</span> version<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Mono</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ResponseEntity</span><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">></span><span class="token punctuation">></span></span> objectMono <span class="token operator">=</span> <span class="token class-name">WebClient</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8090"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">uri</span><span class="token punctuation">(</span><span class="token string">"/return?version="</span> <span class="token operator">+</span> version<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">retrieve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">toEntity</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">ResponseEntity</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">></span></span> response <span class="token operator">=</span> objectMono<span class="token punctuation">.</span><span class="token function">block</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"version : "</span> <span class="token operator">+</span> version<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"response.getHeaders() = "</span> <span class="token operator">+</span> response<span class="token punctuation">.</span><span class="token function">getHeaders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"response.getStatusCodeValue() = "</span> <span class="token operator">+</span> response<span class="token punctuation">.</span><span class="token function">getStatusCodeValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"response.hasBody() = "</span> <span class="token operator">+</span> response<span class="token punctuation">.</span><span class="token function">hasBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"response.getBody() = "</span> <span class="token operator">+</span> response<span class="token punctuation">.</span><span class="token function">getBody</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token string">"test Ok"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/fa45e88b941bf72c0eee1499925724ec/5e982/retrieve_vs_exchange1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.29166666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA7UlEQVQY012QbW6EMAxEOdBKZYF8QEiyQDbA9v7neZVTUqH+GM1Ycl5sN8dxkPdMiDMxRNa08fWKPFLiEQKz95znyb7vbNtGCIFxHFFKMQwDfd/TdV1xUZNzJqWE9740GmMYtEaJK4XWGmvtH6BCRLW+qwDf7zfLsjDPcwEYkTEFcgdKFkmudc1Vjaws6whQpqxNdy/AYUBLXR5e+fZBzU2MkZQ2lhCR7EPAOod2jl5OYC3OOaZpYpwDxgXM5FEX4L+a+Hrx/fmQ9501n8TtIKyZZV3LxMbYMqGcQI8OZR3KTDy7jrZtaZ/PX7/0AyqByC4Nytl4AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/fa45e88b941bf72c0eee1499925724ec/a59e9/retrieve_vs_exchange1.webp 192w,
+/static/fa45e88b941bf72c0eee1499925724ec/0ca9f/retrieve_vs_exchange1.webp 384w,
+/static/fa45e88b941bf72c0eee1499925724ec/dc9b9/retrieve_vs_exchange1.webp 768w,
+/static/fa45e88b941bf72c0eee1499925724ec/e2c2f/retrieve_vs_exchange1.webp 1152w,
+/static/fa45e88b941bf72c0eee1499925724ec/f3efb/retrieve_vs_exchange1.webp 1536w,
+/static/fa45e88b941bf72c0eee1499925724ec/36f90/retrieve_vs_exchange1.webp 1892w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/fa45e88b941bf72c0eee1499925724ec/3b721/retrieve_vs_exchange1.png 192w,
+/static/fa45e88b941bf72c0eee1499925724ec/66595/retrieve_vs_exchange1.png 384w,
+/static/fa45e88b941bf72c0eee1499925724ec/fe486/retrieve_vs_exchange1.png 768w,
+/static/fa45e88b941bf72c0eee1499925724ec/d2d74/retrieve_vs_exchange1.png 1152w,
+/static/fa45e88b941bf72c0eee1499925724ec/e8464/retrieve_vs_exchange1.png 1536w,
+/static/fa45e88b941bf72c0eee1499925724ec/5e982/retrieve_vs_exchange1.png 1892w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/fa45e88b941bf72c0eee1499925724ec/fe486/retrieve_vs_exchange1.png"
+            alt="img1"
+            title="img1"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>정상적으로 값을 받아오는걸 볼 수 있습니다.</p>
+<p>400과 500은 Bad Request와 Internal Server Error로 Webclient가 오류를 띄워주네요.</p>
+<p><code class="language-text">retrieve</code> 에서도 정상적으로 상태코드와 헤더를 받아볼 수 있었습니다.</p>
+<p>그렇다면<code class="language-text">retrieve</code> 에서도 상태코드, 헤더와 같은 정보를 받아올 수 있는데 <code class="language-text">exchange</code> 와는 어떤 점이 다른걸까 더 불분명해진 상황이었습니다.</p>
+<p>자료를 더 찾아본 결과 <code class="language-text">exchange</code>는 응답에 따른 유연한 상태처리가 가능하다는 것이었는데요</p>
+<p>하지만 응답에 따른 상태처리는 <code class="language-text">retrieve</code> 도 <code class="language-text">onStatus</code> 함수로 처리할 수 있습니다.</p>
+<p><code class="language-text">onStatus</code>의 인터페이스를 확인해보면 매개변수로 Throwable을 상속받은 객체를 Mono로 감싸 넘겨줄 수 있습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 694px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0784aa69e9b0cb4a429a3761212ccae4/91652/retrieve_vs_exchange2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 6.770833333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAATElEQVQI1y3DQQqAIBRAwc5UKRT1NVI0ydBq4f0v8to0MJ1WGpmEIIHqCk+MvCHTYqP6QlYnSSeSzBxWuOabutxYI2y7+3usWRmHng+i6yPiXFHR3wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/0784aa69e9b0cb4a429a3761212ccae4/a59e9/retrieve_vs_exchange2.webp 192w,
+/static/0784aa69e9b0cb4a429a3761212ccae4/0ca9f/retrieve_vs_exchange2.webp 384w,
+/static/0784aa69e9b0cb4a429a3761212ccae4/a23a1/retrieve_vs_exchange2.webp 694w"
+              sizes="(max-width: 694px) 100vw, 694px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/0784aa69e9b0cb4a429a3761212ccae4/3b721/retrieve_vs_exchange2.png 192w,
+/static/0784aa69e9b0cb4a429a3761212ccae4/66595/retrieve_vs_exchange2.png 384w,
+/static/0784aa69e9b0cb4a429a3761212ccae4/91652/retrieve_vs_exchange2.png 694w"
+            sizes="(max-width: 694px) 100vw, 694px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/0784aa69e9b0cb4a429a3761212ccae4/91652/retrieve_vs_exchange2.png"
+            alt="img2"
+            title="img2"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<h2 id="exchange-1" style="position:relative;">Exchange<a href="#exchange-1" aria-label="exchange 1 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h2>
+<p>그러면 <code class="language-text">exchange</code> 는 어떤지 살펴보았습니다.</p>
+<p>똑같이 /return으로 요청을 보내고 처리만 <code class="language-text">exchange</code>로 진행하였습니다.</p>
+<p>이번에는 <code class="language-text">exchangeToMono</code>의 인터페이스 먼저 살펴본 후 넘어가겠습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 722px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/88672c90a2c2f3c70a5f121c17737447/ad973/retrieve_vs_exchange3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 5.208333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASElEQVQI1x3Fyw2AIBBAQWtCwx9xFzBA//08E+cyR/YeMZWSHKtFdk9MDbxlMEr7X3Uz70l0AU0GtYF83vjoeESR1hFRvL34AGXuIpJHD6tCAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/88672c90a2c2f3c70a5f121c17737447/a59e9/retrieve_vs_exchange3.webp 192w,
+/static/88672c90a2c2f3c70a5f121c17737447/0ca9f/retrieve_vs_exchange3.webp 384w,
+/static/88672c90a2c2f3c70a5f121c17737447/6aa51/retrieve_vs_exchange3.webp 722w"
+              sizes="(max-width: 722px) 100vw, 722px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/88672c90a2c2f3c70a5f121c17737447/3b721/retrieve_vs_exchange3.png 192w,
+/static/88672c90a2c2f3c70a5f121c17737447/66595/retrieve_vs_exchange3.png 384w,
+/static/88672c90a2c2f3c70a5f121c17737447/ad973/retrieve_vs_exchange3.png 722w"
+            sizes="(max-width: 722px) 100vw, 722px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/88672c90a2c2f3c70a5f121c17737447/ad973/retrieve_vs_exchange3.png"
+            alt="img3"
+            title="img3"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>Throwable을 상속받은 객체만 Mono형태로 리턴할 수 있는 <code class="language-text">onStatus</code>와 달리 Mono를 상속받은 아무 객체나 리턴시킬 수 있습니다.</p>
+<p>이제 테스트를 진행해보겠습니다.</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// /return에 요청을 보내 상태코드에 따라 응답 값을 처리하는 엔드포인트</span>
+<span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/testExchange"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">testExchange</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span>required <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token keyword">int</span> version<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token class-name">Mono</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">></span></span> objectMono <span class="token operator">=</span> <span class="token class-name">WebClient</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string">"http://localhost:8090"</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">uri</span><span class="token punctuation">(</span><span class="token string">"/return?version="</span> <span class="token operator">+</span> version<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">exchangeToMono</span><span class="token punctuation">(</span>res <span class="token operator">-></span> <span class="token punctuation">{</span>
+						<span class="token comment">// 헤더를 통한 컨트롤 또한 가능하다.</span>
+						<span class="token comment">// HttpHeaders httpHeaders = res.headers().asHttpHeaders();</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">HttpStatus</span><span class="token punctuation">.</span><span class="token constant">OK</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span><span class="token function">statusCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">bodyToMono</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">HttpStatus</span><span class="token punctuation">.</span><span class="token constant">MULTIPLE_CHOICES</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span><span class="token function">statusCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token class-name">Mono</span><span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">createException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">flatMap</span><span class="token punctuation">(</span><span class="token class-name">Mono</span><span class="token operator">::</span><span class="token function">error</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"version : "</span> <span class="token operator">+</span> version<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>objectMono<span class="token punctuation">.</span><span class="token function">hasElement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">block</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"objectMono NULL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"objectMono.block().toString() = "</span> <span class="token operator">+</span> objectMono<span class="token punctuation">.</span><span class="token function">block</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token string">"test Ok"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8429e43e5ff83b3b59c2d288abf6596a/c8380/retrieve_vs_exchange4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.729166666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgklEQVQoz2WSW7KbMBBEvZskP0hgBAb0ANkggx/7303f6rHlmOSja0pV0lFPzxyu1yvSkhCihbMO3jn0MeLXNOHPPON38Bicw23bsK6r6Hw+I8aItm1hjEFZltBaSz0sy4JxHDHYHnawcvE0DCiMgWpbqLqGqWucTieRMQ3KqoLWJZTWAvqWAIdhkJ+appFf67pGURRQSqFQSmqW1gplVqlRVdVOB+/9q4UQEHxACAHOe/TUOKILAdZa6cI5Bxsi7DSjDxd0dvwYyTp0XYfb7YZt23C/3/F4PKTyvEq+C1JKuFwumKYJzgd0vUXTdjBNK7m9nL9bJlAGk5KAn8+nQNdtw5KSZErN8wzGE+OEtmlQCkB9hpH1AVJ0lt3yTFeEsDIWZi2tvXP+Bu2AXAU6/AYS8u2MlVky+L8D0ruV+Q+YYdkhXVGEE5jeEfR9L9twPB53sE+GBBLA7Lb3AhOeW+UwWHmHbl9ZRmmf65UHsnOYgQRl5fzo7t88uV58m9clO/wBDvJ4JSKUOgcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <picture>
+          <source
+              srcset="/static/8429e43e5ff83b3b59c2d288abf6596a/a59e9/retrieve_vs_exchange4.webp 192w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/0ca9f/retrieve_vs_exchange4.webp 384w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/dc9b9/retrieve_vs_exchange4.webp 768w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/e2c2f/retrieve_vs_exchange4.webp 1152w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/f3efb/retrieve_vs_exchange4.webp 1536w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/f79a0/retrieve_vs_exchange4.webp 1698w"
+              sizes="(max-width: 768px) 100vw, 768px"
+              type="image/webp"
+            />
+          <source
+            srcset="/static/8429e43e5ff83b3b59c2d288abf6596a/3b721/retrieve_vs_exchange4.png 192w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/66595/retrieve_vs_exchange4.png 384w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/fe486/retrieve_vs_exchange4.png 768w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/d2d74/retrieve_vs_exchange4.png 1152w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/e8464/retrieve_vs_exchange4.png 1536w,
+/static/8429e43e5ff83b3b59c2d288abf6596a/c8380/retrieve_vs_exchange4.png 1698w"
+            sizes="(max-width: 768px) 100vw, 768px"
+            type="image/png"
+          />
+          <img
+            class="gatsby-resp-image-image"
+            src="/static/8429e43e5ff83b3b59c2d288abf6596a/fe486/retrieve_vs_exchange4.png"
+            alt="img4"
+            title="img4"
+            loading="lazy"
+            decoding="async"
+            style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+          />
+        </picture>
+  </a>
+    </span></p>
+<p>오류의 형태로만 컨트롤할 수 있던 <code class="language-text">retrieve</code> 와 달리 <code class="language-text">exchange</code> 는 리턴 값의 형태를 바꾸거나 오류로 치환하는 등의 더 유연한 처리가 가능했습니다.</p>
+<h1 id="마무리" style="position:relative;">마무리<a href="#%EB%A7%88%EB%AC%B4%EB%A6%AC" aria-label="마무리 permalink" class="custom-class after"><svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h1>
+<ol>
+<li><code class="language-text">retrieve</code>는 <code class="language-text">exchange</code> 를 이용한 편의 메서드이다.</li>
+<li><code class="language-text">retrieve</code> 에서도 충분히 상태코드와 헤더를 받아볼 수 있다.</li>
+<li><code class="language-text">retrieve</code> 에서도 <code class="language-text">onStatus</code>를 이용하여 상태코드에 따른 에러처리를 할 수  있으나 에러의 형태로만 처리가 가능하다.</li>
+<li><code class="language-text">exchange</code>는 상태코드 뿐만 아니라 헤더를 통한 처리 등 <code class="language-text">retrieve</code> 보다 훨씬 유연한 처리가 가능하다.</li>
+</ol>
+<p>결과적으로 간단한 처리만 하는 경우에는 <code class="language-text">retrieve</code></p>
+<p>응답 상태 및 결과에 따른 에러발생, 데이터 변경 등 다양한 처리가 필요하다면 <code class="language-text">exchange</code> 를 사용</p>
+<p>추가적으로 Mono나 Flux의 메소드 중 do…, on… 의 여러 메소드들이 존재하여 에러 발생 시 특정 값이 넘기거나 에러를 스킵하고 동작, 성공 시 처리, 종료 시 처리 등의 또 다른 처리들이 가능하지만 아직은 공부가 부족하여 좀 더 공부한 후에 다뤄보는것이 보고싶습니다.</p>
+<p>내용에 틀리거나 지적할 부분이 있을 시 알려주신다면 감사하겠습니다.</p>
+<blockquote>
+<p>참조: <a href="https://stackoverflow.com/questions/58410352/spring-boot-webclients-retrieve-vs-exchange" target="_blank" rel="nofollow">https://stackoverflow.com/questions/58410352/spring-boot-webclients-retrieve-vs-exchange</a></p>
+</blockquote></section><div></div><style data-emotion="css b9tytq">.css-b9tytq{margin-top:auto;display:grid;width:100%;place-items:center;border-width:0px;border-top-width:1px;border-style:solid;--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity));--tw-bg-opacity:1;background-color:rgb(17 22 29 / var(--tw-bg-opacity));padding-top:50px;padding-bottom:50px;padding-left:0px;padding-right:0px;text-align:center;font-size:0.8rem;line-height:1rem;}@media (min-width: 768px){.css-b9tytq{font-size:1rem;}}</style><footer class="css-b9tytq"><span>Thank You for Visiting and Watching My Blog, Have a Good Day 😆</span><br/><span>© 2022 Developer Hardy, Powered By Gatsby.</span></footer></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/post/20220810/retrieve_vs_exchange/";window.___webpackCompilationHash="5efd8716aef266cb0c52";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c9fa82aa5b1f9c65f078.js"],"app":["/app-c98f86b47ae6c77a2fc9.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-b7d372407a56169a42e9.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-abecfabbb33102e0e562.js"],"component---src-pages-info-tsx":["/component---src-pages-info-tsx-356f0905750d3ef422f1.js"],"component---src-templates-post-template-tsx":["/component---src-templates-post-template-tsx-f255b7ce215284a964b8.js"]};/*]]>*/</script><script src="/polyfill-c9fa82aa5b1f9c65f078.js" nomodule=""></script><script src="/app-c98f86b47ae6c77a2fc9.js" async=""></script><script src="/framework-472130f6e8a3520919b0.js" async=""></script><script src="/webpack-runtime-143654097131bf547f28.js" async=""></script></body></html>
