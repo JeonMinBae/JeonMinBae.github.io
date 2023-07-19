@@ -40,7 +40,7 @@ const Introduction = (
                 <ProfileImage profileImage={profileImage} />
                 <div>
                     <Title data-component={'Title'}>전민배의 블로그</Title>
-                    <SubTitle data-component={'SubTitle'}>노력</SubTitle>
+                    <SubTitle data-component={'SubTitle'}>몰?루</SubTitle>
                 </div>
             </Wrapper>
         </Background>

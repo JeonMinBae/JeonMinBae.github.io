@@ -30,7 +30,7 @@ const Template = (
         <Container data-component={'Container'}>
             <Helmet>
                 <html lang="ko" />
-                <title>JeonMinBae's Blog</title>
+                <title>{title ||"JeonMinBae's Blog"}</title>
 
                 <meta name="description" content="많은 배움이 필요한 개발자입니다." />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

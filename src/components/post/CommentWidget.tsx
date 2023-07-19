@@ -3,7 +3,7 @@ import React, { createRef, useEffect } from "react"
 
 
 const src = 'https://utteranc.es/client.js'
-const repo = '/JeonMinBae.github.io'
+const repo = 'JeonMinBae/JeonMinBae.github.io'
 
 
 
@@ -32,7 +32,7 @@ const CommentWidget = ({}: ICommentWidgetProps) => {
             repo,
             'issue-term': 'pathname',
             label: 'Comment',
-            theme: `github-light`,
+            theme: `github-dark`,
             crossorigin: 'anonymous',
             async: 'true',
         }
@@ -44,7 +44,7 @@ const CommentWidget = ({}: ICommentWidgetProps) => {
         element.current.appendChild(utterances)
     }, [])
 
-    return <div ref={element} />
+    return <div className={'w-full py-5'} ref={element} />
 }
 
 
