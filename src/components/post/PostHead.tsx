@@ -1,6 +1,7 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import PostHeadInfo, { IPostHeadInfoProps } from "components/post/PostHeadInfo"
+import tw, {styled} from "twin.macro";
 
 
 export interface IGatsbyImgProps {
@@ -8,11 +9,6 @@ export interface IGatsbyImgProps {
     alt: string
     className?: string
 }
-
-
-
-const BackgroundImage = (props: IGatsbyImgProps) => <GatsbyImage {...props} className={`brightness-[0.25] object-cover w-full h-[25rem] relative`}  />
-const PostHeadWrapper = (props) => <div data-component={'PostHeadWrapper'} className={`w-full h-[25rem] relative`}>{props.children}</div>
 
 export interface IPostHeadProps extends IPostHeadInfoProps{
     thumbnail: IGatsbyImageData
@@ -35,6 +31,9 @@ const PostHead = (
         </PostHeadWrapper>
     )
 }
+
+const BackgroundImage = styled(GatsbyImage)`${tw`brightness-[0.25] object-cover w-full h-[25rem] relative`}`
+const PostHeadWrapper = styled.div`${tw`w-full h-[25rem] relative`}`
 
 
 PostHead.defaultProps = {}

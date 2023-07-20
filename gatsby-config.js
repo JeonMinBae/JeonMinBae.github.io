@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: `배우고 공부한 것을 기록하는 저장소`,
-        description: `크고 작음에 상관없이 배우게된 것 알게된 것 정리한 것들을 기록하고 있는 블로그 입니다.`,
+        description: `배우게된 것 알게된 것 정리한 것들을 기록하고 있는 블로그 입니다.`,
         author: `Hardy`,
         siteUrl: `https://jeonminbae.github.io/`
     },

@@ -2,10 +2,7 @@ import React, {useMemo, useState} from "react"
 import PostItem, {PostFrontmatterType} from "components/main/PostItem"
 import Pagination from "@mui/material/Pagination"
 import tw, {styled} from "twin.macro";
-
-
-
-const PostListWrapper = styled.div`${tw`grid grid-cols-post-1 gap-4 my-0 mx-auto py-12 px-5 sm:grid-cols-post-2 md:(grid-cols-post-2 max-w-[1258px] pt-[50px] px-0 pb-[100px]) lg:grid-cols-post-3 xl:grid-cols-post-4`}`
+import {PaginationItem} from "@mui/material";
 
 
 export type PostListItemType = {
@@ -68,18 +65,23 @@ const PostList = (
                         />
                     )}
             </PostListWrapper>
-            {/*    TODO pagination*/}
             <Pagination className={`col-span-4 justify-self-center mb-10`}
                         page={page}
                         onChange={onChange}
                         count={Math.ceil(filteredPostCount / pageSize)}
-                        color={"primary"}
+                        renderItem={(props) => <PaginationItem
+                            {...props}
+                            className={'border border-1 border-zinc-700 text-gray-200'}
+                            disableRipple
+                        />}
                         variant={"outlined"}
                         shape={"rounded"}
             />
         </>
     )
-}
+};
+
+const PostListWrapper = styled.div`${tw`grid grid-cols-post-1 gap-4 my-0 mx-auto py-12 px-5 sm:grid-cols-post-2 md:(grid-cols-post-2 max-w-[1258px] pt-[50px] px-0 pb-[100px]) lg:grid-cols-post-3 xl:grid-cols-post-4`}`
 
 
 PostList.defaultProps = {}

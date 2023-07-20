@@ -1,9 +1,9 @@
 require('twin.macro')
 const path = require("path")
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const {createFilePath} = require(`gatsby-source-filesystem`)
 
 // Setup Import Alias
-exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
+exports.onCreateWebpackConfig = ({getConfig, actions}) => {
     const output = getConfig().output || {}
 
     actions.setWebpackConfig({
@@ -19,38 +19,46 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
 }
 
 // Generate a Slug Each Post Data
-exports.onCreateNode = ({ node, getNode, actions }) => {
-    const { createNodeField } = actions
+exports.onCreateNode = ({node, getNode, actions}) => {
+    const {createNodeField} = actions
 
     if (node.internal.type === `MarkdownRemark`) {
-        const slug = createFilePath({ node, getNode })
+        const slug = createFilePath({node, getNode})
 
-        createNodeField({ node, name: "slug", value: slug })
+        createNodeField({node, name: "slug", value: slug})
     }
 }
 
 // Generate Post Page Through Markdown Data
-exports.createPages = async ({ actions, graphql, reporter }) => {
-    const { createPage } = actions
+exports.createPages = async ({actions, graphql, reporter}) => {
+    const {createPage} = actions
 
     // Get All Markdown File For Paging
-    const queryAllMarkdownData = await graphql(
-        `
-      {
-        allMarkdownRemark(
-          sort: {
-            order: DESC
-            fields: [frontmatter___date, frontmatter___title]
-          }
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
+    const queryAllMarkdownData = await graphql(`
+        {
+            allMarkdownRemark(
+                sort: {
+                order: DESC
+                fields: [frontmatter___date, frontmatter___title]
+                }
+            ) {
+                edges {
+                    node {
+                        id
+                        fields {
+                            slug
+                        }
+                        frontmatter{
+                            title
+                            thumbnail {
+                                childImageSharp {
+                                    gatsbyImageData(width: 192, height: 100)
+                                }
+                            }
+                        }
+                    }
+                }
             }
-          }
-        }
       }
       `
     )
@@ -69,23 +77,57 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 
     // Page Generating Function
+    // const generatePostPage = (
+    //     {
+    //         node: {
+    //             fields: {slug}
+    //         }
+    //     }
+    // ) => {
+    //     const pageOptions = {
+    //         path: slug,
+    //         component: PostTemplateComponent,
+    //         context: {
+    //             slug: slug,
+    //         }
+    //     }
+    //
+    //     createPage(pageOptions);
+    // }
     const generatePostPage = (
         {
             node: {
-                fields: { slug }
-            }
+                fields: {slug}
+            },
+            ids,
         }
     ) => {
         const pageOptions = {
             path: slug,
             component: PostTemplateComponent,
-            context: { slug }
+            context: {
+                slug: slug,
+                ids: ids,
+            }
         }
 
         createPage(pageOptions);
     }
-
     // Generate Post Page And Passing Slug Props for Query
-    queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(generatePostPage)
+    // queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(generatePostPage);
+    for (let i = 0; i < queryAllMarkdownData.data.allMarkdownRemark.edges.length; i++) {
+        const edges = queryAllMarkdownData.data.allMarkdownRemark.edges;
+        const previousId = edges[i-1]?.node.id;
+        const currentEdge = edges[i];
+        const nextId = edges[i+1]?.node.id;
+
+        generatePostPage({
+            ...currentEdge,
+            ids: [previousId, currentEdge.node.id, nextId],
+        });
+    }
+    // queryAllMarkdownData.data.allMarkdownRemark.edges.forEach(value => {
+    //     return generatePostPage(value)
+    // })
 
 }

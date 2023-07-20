@@ -10,7 +10,12 @@ export interface IPostContentProps {
 
 const PostContent = ({ html }: IPostContentProps) => {
 
-    const MarkdownRenderer = styled.section`
+    return (
+        <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+    )
+}
+
+const MarkdownRenderer = styled.section`
       // Renderer Style
       display: flex;
       flex-direction: column;
@@ -136,11 +141,6 @@ const PostContent = ({ html }: IPostContentProps) => {
       }
     `
 
-
-    return (
-        <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
-    )
-}
 
 
 PostContent.defaultProps = {}

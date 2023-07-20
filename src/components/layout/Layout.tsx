@@ -1,5 +1,6 @@
 import React from "react"
 import { GlobalStyles } from 'twin.macro'
+import {StyledEngineProvider} from "@mui/styled-engine";
 
 
 
@@ -9,11 +10,15 @@ export interface ILayoutProps {
 
 const Layout = ({children, ...rest}: ILayoutProps) => {
 
+
+
     return (
-        <div data-component={'Layout'} {...rest}>
-            <GlobalStyles />
-            {children}
-        </div>
+        <StyledEngineProvider injectFirst>
+            <div data-component={'Layout'} {...rest}>
+                <GlobalStyles />
+                {children}
+            </div>
+        </StyledEngineProvider>
     )
 }
 

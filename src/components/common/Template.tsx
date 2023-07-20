@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Footer from "components/common/Footer"
-import SideMenu from "components/common/SideMenu";
+import Footer from "components/layout/Footer"
+import SideMenu from "components/layout/SideMenu";
 import tw, {styled} from "twin.macro";
 
 
